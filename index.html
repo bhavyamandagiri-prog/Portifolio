@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bhavya Mandagiri | VLSI, Full Webstack & AI Developer Portfolio</title>
+  <meta name="description" content="Academic and developer portfolio of Bhavya Mandagiri, a B.Tech ECE student specializing in VLSI, Full Webstack Development, and AI.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/components.css">
+</head>
+<body>
+
+  <!-- Background Grids & Ambient Glow Circles -->
+  <div class="bg-grid-glow"></div>
+  <div class="bg-ambient-circles">
+    <div class="ambient-circle circle-1"></div>
+    <div class="ambient-circle circle-2"></div>
+    <div class="ambient-circle circle-3"></div>
+  </div>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress-container">
+    <div class="scroll-progress-bar" id="scroll-bar"></div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="navbar-container">
+      <a href="#hero" class="logo">
+        <svg viewBox="0 0 24 24">
+          <defs>
+            <linearGradient id="cyber-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#7303c0" />
+              <stop offset="50%" stop-color="#ec38bc" />
+              <stop offset="100%" stop-color="#00f5d4" />
+            </linearGradient>
+          </defs>
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+        </svg>
+        <span class="text-gradient">BM.dev</span>
+      </a>
+      
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#academics">Academics</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#achievements">Achievements</a></li>
+          <li><a href="#certificates">Certificates</a></li>
+          <li><a href="#extracurriculars">Timeline</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
+          <i data-lucide="moon" class="moon-icon"></i>
+          <i data-lucide="sun" class="sun-icon"></i>
+        </button>
+        <button class="mobile-menu-btn" id="menu-toggle" aria-label="Open Menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="container hero-wrapper">
+      <div class="hero-content">
+        <span class="hero-welcome">Portfolio Launchpad v2.0</span>
+        <h1 class="hero-title">
+          Hi, I'm <br>
+          <span class="text-gradient">Bhavya Mandagiri</span>
+        </h1>
+        <div class="typewriter-container">
+          <h2 id="typewriter" class="text-gradient" style="font-size: 1.8rem; font-weight: 600;"></h2>
+        </div>
+        <p class="hero-tagline">
+          Developing high-performance full-stack web applications, designing optimized VLSI systems, and implementing intelligent AI models.
+        </p>
+        <div class="hero-cta">
+          <a href="#resume" class="btn btn-primary">
+            <i data-lucide="file-text"></i> View Resume
+          </a>
+          <a href="#about" class="btn btn-secondary">Explore Portfolio</a>
+        </div>
+      </div>
+      
+      <div class="hero-visual">
+        <div class="hero-avatar-frame">
+          <div class="hero-avatar-inner">
+            <img src="images/profile.jpg" alt="Bhavya Mandagiri">
+          </div>
+        </div>
+        <div class="hero-tech-orbits">
+          <div class="orbit-node node-1" title="VLSI Systems"><i data-lucide="layers"></i></div>
+          <div class="orbit-node node-2" title="Full Stack Web"><i data-lucide="code-2"></i></div>
+          <div class="orbit-node node-3" title="AI / ML"><i data-lucide="brain"></i></div>
+          <div class="orbit-node node-4" title="VLSI DFT"><i data-lucide="cpu"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="reveal">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title text-gradient">About Me</h2>
+        <p class="section-subtitle">The background, vision, and core skillset driving my academic and professional journey.</p>
+      </div>
+      
+      <div class="about-wrapper">
+        <div class="about-bio">
+          <h3 style="font-size: 1.8rem; margin-bottom: 15px;">Transforming Ideas Into Silicon & Software</h3>
+          <p>
+            I am a 3rd-year B.Tech Electronics and Communication Engineering (ECE) student at Andhra Loyola Institute of Engineering and Technology (ALIET), affiliated with JNTUK. My training focuses on VLSI systems and digital electronics, which I combine with modern full-stack web development and artificial intelligence models.
+          </p>
+          <p>
+            I specialize in designing VLSI circuits, coding full-stack web applications, and building AI models. I am highly interested in VLSI DFT (Design for Testability), software architecture, and AI integrations, aiming to create innovative tech solutions for top-tier companies.
+          </p>
+          <div class="about-motivation">
+            "I believe the future of computing lies at the convergence of smart systems and scalable web infrastructures. My drive is to build technologies that feel invisible but make the world work better."
+          </div>
+        </div>
+        
+        <div class="skills-wrapper">
+          <h3 style="font-size: 1.5rem; margin-bottom: 20px;">Technical Skills</h3>
+          
+          <div class="skill-category">
+            <span class="skill-category-title"><i data-lucide="layers"></i> VLSI Design</span>
+            <div class="skills-grid">
+              <span class="skill-tag">Verilog HDL</span>
+              <span class="skill-tag">Xilinx Vivado</span>
+              <span class="skill-tag">VLSI DFT</span>
+              <span class="skill-tag">LTSpice</span>
+              <span class="skill-tag">Digital Electronics</span>
+              <span class="skill-tag">UART / SPI / I2C</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <span class="skill-category-title"><i data-lucide="code"></i> Full Stack Development</span>
+            <div class="skills-grid">
+              <span class="skill-tag">JavaScript (ES6+)</span>
+              <span class="skill-tag">HTML5 / CSS3</span>
+              <span class="skill-tag">React.js</span>
+              <span class="skill-tag">Node.js / Express</span>
+              <span class="skill-tag">MongoDB / SQL</span>
+              <span class="skill-tag">Git / GitHub</span>
+            </div>
+          </div>
+          
+          <div class="skill-category">
+            <span class="skill-category-title"><i data-lucide="brain-circuit"></i> AI & ML</span>
+            <div class="skills-grid">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">TensorFlow</span>
+              <span class="skill-tag">Scikit-learn</span>
+              <span class="skill-tag">OpenCV</span>
+              <span class="skill-tag">Data Analysis</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Academic Profile Section -->
+  <section id="academics" class="reveal">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title text-gradient">Academic Profile</h2>
+        <p class="section-subtitle">Real-time academic performance dashboard and core curriculum tracking.</p>
+      </div>
+      
+      <div class="academic-dashboard">
+        <!-- Interactive CGPA Card -->
+        <div class="glass-card dashboard-summary">
+          <div class="cgpa-gauge-container">
+            <svg class="cgpa-svg" viewBox="0 0 200 200">
+              <defs>
+                <linearGradient id="dash-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#00f5d4" />
+                  <stop offset="100%" stop-color="#9d4edd" />
+                </linearGradient>
+              </defs>
+              <circle class="cgpa-track" cx="100" cy="100" r="84" />
+              <circle class="cgpa-indicator" id="cgpa-gauge" cx="100" cy="100" r="84" />
+            </svg>
+            <div class="cgpa-value-overlay">
+              <span class="cgpa-number">
+                <input type="number" id="cgpa-input" value="8.06" min="0" max="10.00" step="0.01" aria-label="CGPA Value">
+              </span>
+              <span class="cgpa-max">/ 10.00 CGPA</span>
+            </div>
+          </div>
+          
+          <div class="dashboard-info">
+            <h3 class="dashboard-details-title">B.Tech ECE Student</h3>
+            <p class="dashboard-college">Andhra Loyola Institute of Engineering & Technology</p>
+            <p class="dashboard-affiliation">Affiliated to JNTUK | Vijayawada West, AP, India</p>
+            <p class="dashboard-affiliation" style="margin-top: 15px; color: var(--accent-cyan); font-weight: 500; font-size: 0.8rem;">
+              <i data-lucide="info" style="width: 14px; height: 14px; vertical-align: middle;"></i> Click the CGPA number to simulate updates!
+            </p>
+          </div>
+        </div>
+        
+        <!-- Semester breakdown -->
+        <div class="glass-card" style="padding: 25px;">
+          <h3 style="margin-bottom: 20px; font-size: 1.3rem; display: flex; align-items: center; gap: 10px;">
+            <i data-lucide="bar-chart-3" style="color: var(--accent-cyan);"></i> Semester Analytics Breakdown
+          </h3>
+          <div class="semester-cards-container" id="semester-list">
+            <!-- Semester Cards injected by JS -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="reveal">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title text-gradient">Featured Projects</h2>
+        <p class="section-subtitle">A showcase of projects representing the intersection of hardware firmware, AI algorithms, and responsive UI components.</p>
+      </div>
+      
+      <div class="projects-grid" id="projects-grid">
+        <!-- Project 1 -->
+        <div class="glow-card-container">
+          <div class="glass-card project-card">
+            <div class="project-thumbnail">
+              <img src="images/healthcare.png" alt="Green Tech AI Healthcare & Monitoring System">
+            </div>
+            <div class="project-body">
+              <div class="project-icon"><i data-lucide="leaf"></i></div>
+              <h3 class="project-title">Green Tech AI Healthcare & Monitoring System</h3>
+              <p class="project-desc">
+                Built an AI-powered healthcare monitoring system with medicine reminders, camera-based verification, and automated family notifications. Developed dashboards with health analytics and pollution monitoring.
+              </p>
+              <div class="project-tech">
+                <span>Python</span>
+                <span>OpenCV</span>
+                <span>CNN</span>
+                <span>TensorFlow</span>
+                <span>Dashboards</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/bhavyamandagiri/green-ai-healthcare-system" target="_blank" class="project-link">
+                  <i data-lucide="github"></i> Repository
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="glow-card-container">
+          <div class="glass-card project-card">
+            <div class="project-thumbnail">
+              <img src="images/patient.png" alt="Patient Health Monitoring System">
+            </div>
+            <div class="project-body">
+              <div class="project-icon"><i data-lucide="activity"></i></div>
+              <h3 class="project-title">Patient Health Monitoring System</h3>
+              <p class="project-desc">
+                Built an Arduino-based real-time patient monitoring system using temperature and ECG sensors. Enabled continuous vital monitoring with remote healthcare data visualization.
+              </p>
+              <div class="project-tech">
+                <span>Arduino</span>
+                <span>C/C++</span>
+                <span>ECG Sensor</span>
+                <span>Temp Sensor</span>
+                <span>Data Viz</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/bhavyamandagiri/patient-health-monitor" target="_blank" class="project-link">
+                  <i data-lucide="github"></i> Repository
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="glow-card-container">
+          <div class="glass-card project-card">
+            <div class="project-thumbnail">
+              <img src="images/curriculum.jpg" alt="Smart Curriculum & Attendance App">
+            </div>
+            <div class="project-body">
+              <div class="project-icon"><i data-lucide="calendar"></i></div>
+              <h3 class="project-title">Smart Curriculum & Attendance App</h3>
+              <p class="project-desc">
+                Developed a digital application to manage academic curriculum activities and automate attendance tracking for students and faculty. Optimized database workflows with a responsive interface.
+              </p>
+              <div class="project-tech">
+                <span>HTML5/CSS3</span>
+                <span>JavaScript</span>
+                <span>SQLite</span>
+                <span>Data Analytics</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/bhavyamandagiri/smart-curriculum-app" target="_blank" class="project-link">
+                  <i data-lucide="github"></i> Repository
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements Section -->
+  <section id="achievements" class="reveal">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title text-gradient">Achievements & Recognition</h2>
+        <p class="section-subtitle">Milestones and certifications that demonstrate my dedication to continuous technical growth.</p>
+      </div>
+      
+      <div class="achievements-grid">
+        <div class="glass-card achievement-card">
+          <div class="achievement-badge"><i data-lucide="award"></i></div>
+          <h3 class="achievement-title">EPISTEMICON 2025 (2nd Prize)</h3>
+          <p class="achievement-desc">Won 2nd Prize at the Project Expo of EPISTEMICON 2025, a National-Level Technical Symposium hosted at Andhra Loyola Institute of Engineering and Technology.</p>
+        </div>
+
+        <div class="glass-card achievement-card">
+          <div class="achievement-badge" style="background: rgba(0, 245, 212, 0.1); border-color: rgba(0, 245, 212, 0.2); color: var(--accent-cyan);"><i data-lucide="award"></i></div>
+          <h3 class="achievement-title">VBYLD 2026 Delegate</h3>
+          <p class="achievement-desc">Selected and participated as a delegate in the Viksit Bharat Young Leaders Dialogue (VBYLD) 2026, organized by the Ministry of Youth Affairs & Sports (MYBharat).</p>
+        </div>
+
+        <div class="glass-card achievement-card">
+          <div class="achievement-badge" style="background: rgba(157, 78, 221, 0.1); border-color: rgba(157, 78, 221, 0.2); color: var(--accent-purple);"><i data-lucide="award"></i></div>
+          <h3 class="achievement-title">Industrial IoT Workshop</h3>
+          <p class="achievement-desc">Participated and completed the intensive Two-Day Workshop on Industrial IoT conducted at Andhra Loyola Institute of Engineering and Technology in Feb 2025.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificates Gallery Section -->
+  <section id="certificates" class="reveal">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title text-gradient">Certificates Gallery</h2>
+        <p class="section-subtitle">Credential records validating my technical skillset and continuing learning.</p>
+      </div>
+      
+      <!-- Filters -->
+      <div class="gallery-filters">
+        <button class="filter-btn active" data-filter="all">All Certificates</button>
+        <button class="filter-btn" data-filter="coding">Coding & Software</button>
+        <button class="filter-btn" data-filter="hackathons">Hackathons</button>
+        <button class="filter-btn" data-filter="workshops">Workshops & ECE</button>
+      </div>
+      
+      <!-- Grid -->
+      <div class="gallery-grid" id="gallery-grid">
+        <!-- Certificates dynamically generated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox-modal" id="lightbox">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close">&times;</button>
+      <!-- Premium placeholder canvas for zoomed certificate representation -->
+      <div id="lightbox-media-wrapper">
+        <img class="lightbox-img" id="lightbox-img" src="" alt="Zoomed Certificate">
+      </div>
+      <h3 class="lightbox-title" id="lightbox-title"></h3>
+    </div>
+  </div>
+
+  <!-- Timeline (Extracurricular) Section -->
+  <section id="extracurriculars" class="reveal">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title text-gradient">Activities & Timeline</h2>
+        <p class="section-subtitle">Key technical milestones, participations, and academic dialogues.</p>
+      </div>
+      
+      <div class="timeline" id="timeline">
+        <div class="timeline-item left">
+          <div class="timeline-icon"><i data-lucide="award"></i></div>
+          <div class="timeline-content">
+            <span class="timeline-date">Feb 2026</span>
+            <h3>Viksit Bharat Young Leaders Dialogue (VBYLD)</h3>
+            <p class="timeline-role">Ministry of Youth Affairs & Sports (MYBharat)</p>
+            <p>Participated in the national dialogue event focusing on youth leadership, technical development, and policy innovation.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item right">
+          <div class="timeline-icon"><i data-lucide="award"></i></div>
+          <div class="timeline-content">
+            <span class="timeline-date">Feb 2025</span>
+            <h3>EPISTEMICON 2025 - Project Expo</h3>
+            <p class="timeline-role">ALIET National Symposium</p>
+            <p>Awarded 2nd Prize in the Project Expo for presenting a prototype modeling real-time sensor integration systems.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item left">
+          <div class="timeline-icon"><i data-lucide="cpu"></i></div>
+          <div class="timeline-content">
+            <span class="timeline-date">Feb 2025</span>
+            <h3>Two-Day Workshop on Industrial IoT</h3>
+            <p class="timeline-role">Andhra Loyola Institute (ALIET)</p>
+            <p>Completed hands-on laboratory workshops focusing on IIoT gateways, sensor arrays, and telemetry data models.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item right">
+          <div class="timeline-icon"><i data-lucide="check-circle-2"></i></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2024 - 2025</span>
+            <h3>Academic Competence Certifications</h3>
+            <p class="timeline-role">NPTEL & APSSDC Programs</p>
+            <p>Completed professional credentials covering PCB Design, Python Fundamentals, and Artificial Intelligence.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume Management Section -->
+  <section id="resume" class="reveal">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title text-gradient">Resume Dashboard</h2>
+        <p class="section-subtitle">Upload and update CV materials with integrated real-time dynamic rendering.</p>
+      </div>
+      
+      <div class="glass-card resume-section-wrapper">
+        <!-- Left Side: Simulator controls -->
+        <div class="resume-uploader">
+          <div>
+            <h3 style="font-size: 1.4rem; margin-bottom: 12px; color: var(--accent-cyan);">CV Management Hub</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 25px;">
+              Recruiters can view, download, or inspect the version logs of my cv. You can also simulate uploading a fresh PDF draft to inspect the dynamic layout updates.
+            </p>
+            
+            <div class="dropzone" id="resume-dropzone">
+              <input type="file" id="resume-file-input" style="display: none;" accept=".pdf">
+              <div class="dropzone-icon"><i data-lucide="upload-cloud"></i></div>
+              <div class="dropzone-text">
+                <h4>Simulate Resume Upload</h4>
+                <p>Drag & Drop or Click to browse (PDF only)</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="resume-history">
+            <h4 class="history-title"><i data-lucide="history" style="color: var(--accent-pink);"></i> CV Version History</h4>
+            <div class="history-list" id="resume-history-list">
+              <!-- Instantiated by JS -->
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right Side: Live Mock Preview -->
+        <div class="resume-preview-panel">
+          <div class="preview-header">
+            <span style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted); display: flex; align-items: center; gap: 6px;">
+              <span class="status-dot"></span> LIVE_PREVIEW.PDF
+            </span>
+            <div class="preview-actions">
+              <button class="btn btn-secondary" style="padding: 6px 14px; font-size: 0.8rem;" id="print-resume-btn">
+                <i data-lucide="printer" style="width: 14px; height: 14px;"></i> Print / PDF
+              </button>
+              <a href="#" class="btn btn-primary" style="padding: 6px 14px; font-size: 0.8rem; color: #000;" id="download-resume-btn">
+                <i data-lucide="download" style="width: 14px; height: 14px;"></i> Download
+              </a>
+            </div>
+          </div>
+          
+          <div class="preview-body" id="resume-preview-body">
+            <!-- Simulated resume details generated by JS dynamically based on uploaded values -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="reveal">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title text-gradient">Get In Touch</h2>
+        <p class="section-subtitle">Reach out for internship placements, research sponsorships, hackathon team collaboration, or job offers.</p>
+      </div>
+      
+      <div class="glass-card contact-wrapper">
+        <!-- Left: Info panel -->
+        <div class="contact-info">
+          <div>
+            <h3 style="font-size: 1.5rem; margin-bottom: 15px;">Contact Information</h3>
+            <p style="color: var(--text-muted); margin-bottom: 25px;">Feel free to drop a message or reach out via professional networks. I typically reply within 24 hours.</p>
+          </div>
+          
+          <div class="info-item">
+            <div class="info-icon"><i data-lucide="mail"></i></div>
+            <div class="info-details">
+              <h4>Email Address</h4>
+              <p><a href="mailto:bhavya.mandagiri.ece@gmail.com">bhavya.mandagiri.ece@gmail.com</a></p>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <div class="info-icon"><i data-lucide="map-pin"></i></div>
+            <div class="info-details">
+              <h4>Current Location</h4>
+              <p>Andhra Pradesh, India</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon"><i data-lucide="graduation-cap"></i></div>
+            <div class="info-details">
+              <h4>JNTUK Affiliated</h4>
+              <p>Andhra Loyola Institute of Eng. & Tech.</p>
+            </div>
+          </div>
+          
+          <div>
+            <h4 style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px; text-transform: uppercase;">Professional Portals</h4>
+            <div class="social-links">
+              <a href="https://linkedin.com/in/bhavya-mandagiri-106ba02b5" target="_blank" class="social-btn" title="LinkedIn"><i data-lucide="linkedin"></i></a>
+              <a href="https://github.com/bhavyamandagiri" target="_blank" class="social-btn" title="GitHub"><i data-lucide="github"></i></a>
+              <a href="mailto:bhavya.mandagiri.ece@gmail.com" class="social-btn" title="Email"><i data-lucide="mail"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right: Interactive form -->
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-group">
+            <label class="form-label" for="form-name">Sender Full Name</label>
+            <input type="text" class="form-control" id="form-name" placeholder="E.g., Recruiter / Professor" required>
+            <div class="form-error-msg" id="name-error">Please fill in your name (minimum 3 characters).</div>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="form-email">Sender Email Address</label>
+            <input type="email" class="form-control" id="form-email" placeholder="recruiter@company.com" required>
+            <div class="form-error-msg" id="email-error">Please enter a valid email address.</div>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="form-subject">Subject</label>
+            <input type="text" class="form-control" id="form-subject" placeholder="Internship / Placement Opportunity" required>
+            <div class="form-error-msg" id="subject-error">Subject cannot be empty.</div>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="form-message">Detailed Inquiry Description</label>
+            <textarea class="form-control" id="form-message" rows="5" placeholder="Hi Bhavya, we reviewed your ECE/Full Stack profile and..." required></textarea>
+            <div class="form-error-msg" id="message-error">Please enter a brief message details.</div>
+          </div>
+          
+          <button type="submit" class="btn btn-primary" style="width: 100%;">
+            <i data-lucide="send"></i> Dispatch Secure Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="padding: 40px 0; border-top: 1px solid var(--border-color); text-align: center; background: rgba(0,0,0,0.2);">
+    <div class="container">
+      <p style="font-size: 0.9rem; color: var(--text-muted);">
+        &copy; 2026 Bhavya Mandagiri. All rights reserved. Designed with cyber glassmorphic principles & ECE engineering design tokens.
+      </p>
+      <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 8px; font-family: monospace;">
+        Compiled in JNTUK-Affiliated Andhra Loyola Institute of Engineering and Technology (ALIET). Connected Node: AP-IN
+      </p>
+    </div>
+  </footer>
+
+  <!-- Floating Resume Download Action (Triggers on Scroll) -->
+  <a href="#resume" class="floating-resume-btn" id="floating-resume">
+    <i data-lucide="download"></i> CV Quick Access
+  </a>
+
+  <!-- AI Chatbot Assistant Widget -->
+  <div class="chatbot-widget">
+    <button class="chatbot-btn" id="chatbot-toggle" aria-label="Open AI Assistant Chat">
+      <i data-lucide="message-square"></i>
+    </button>
+    
+    <div class="chatbot-container glass-card" id="chatbot-box">
+      <div class="chatbot-header">
+        <div class="chatbot-bot-info">
+          <div class="bot-avatar">BM</div>
+          <div>
+            <p class="bot-name">Portfolio Assistant</p>
+            <p class="bot-status"><span class="status-dot"></span> Active Engine</p>
+          </div>
+        </div>
+        <button class="chatbot-close" id="chatbot-close-btn">&times;</button>
+      </div>
+      
+      <div class="chatbot-messages" id="chatbot-messages-log">
+        <!-- Message history tags -->
+      </div>
+      
+      <div class="chat-suggestions">
+        <button class="suggest-btn" data-query="skills">Technical Skills</button>
+        <button class="suggest-btn" data-query="projects">Main ECE Projects</button>
+        <button class="suggest-btn" data-query="contact">How to hire</button>
+        <button class="suggest-btn" data-query="cgpa">CGPA & College</button>
+      </div>
+      
+      <form class="chatbot-input-area" id="chatbot-form">
+        <input type="text" class="chatbot-input" id="chatbot-input-field" placeholder="Ask about skills, projects..." required>
+        <button type="submit" class="chatbot-send" aria-label="Send Message">
+          <i data-lucide="chevron-right"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification Stack -->
+  <div class="toast-container">
+    <div class="toast" id="submit-toast">
+      <span class="toast-icon"><i data-lucide="check-circle-2"></i></span>
+      <span id="toast-text">Secure Message Dispatched Successfully!</span>
+    </div>
+  </div>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Modular JS Application Scripts -->
+  <script src="js/app.js?v=1.1"></script>
+  <script src="js/dashboard.js?v=1.1"></script>
+  <script src="js/gallery.js?v=1.1"></script>
+  <script src="js/resume.js?v=1.1"></script>
+  <script src="js/contact.js?v=1.1"></script>
+  <script src="js/chatbot.js?v=1.1"></script>
+</body>
+</html>

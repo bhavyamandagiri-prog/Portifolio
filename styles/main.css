@@ -1,0 +1,294 @@
+/* ==========================================================================
+   DESIGN SYSTEM - Bhavya Mandagiri's Academic Portfolio
+   ========================================================================== */
+
+/* Theme Variables */
+:root {
+  /* Fonts */
+  --font-title: 'Poppins', 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Theme: Cyber Dark (Default) */
+  --bg-primary: #040209;
+  --bg-secondary: #0a0718;
+  --bg-card: rgba(13, 9, 29, 0.55);
+  --bg-card-hover: rgba(22, 16, 48, 0.75);
+  
+  --text-primary: #f5f3ff;
+  --text-secondary: #a78bfa;
+  --text-muted: #7c7297;
+  
+  --border-color: rgba(167, 139, 250, 0.15);
+  --border-hover: rgba(0, 245, 212, 0.5);
+  
+  --accent-purple: #9d4edd;
+  --accent-cyan: #00f5d4;
+  --accent-pink: #ff007f;
+  --accent-blue: #4361ee;
+  
+  --gradient-cyber: linear-gradient(135deg, #7303c0 0%, #ec38bc 50%, #00f5d4 100%);
+  --gradient-glow: radial-gradient(circle at 50% 50%, rgba(157, 78, 221, 0.15) 0%, transparent 80%);
+  
+  --card-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  --card-glow: 0 0 15px rgba(157, 78, 221, 0.1);
+  --glow-strength: rgba(0, 245, 212, 0.4);
+
+  --scroll-track: #05030b;
+  --scroll-thumb: #9d4edd;
+  --scroll-thumb-hover: #00f5d4;
+  
+  --transition-speed: 0.3s;
+}
+
+[data-theme="light"] {
+  /* Theme: Academic Professional Light */
+  --bg-primary: #f5f6fa;
+  --bg-secondary: #ffffff;
+  --bg-card: rgba(255, 255, 255, 0.8);
+  --bg-card-hover: rgba(255, 255, 255, 0.95);
+  
+  --text-primary: #1e1b4b;
+  --text-secondary: #4f46e5;
+  --text-muted: #6b7280;
+  
+  --border-color: rgba(79, 70, 229, 0.15);
+  --border-hover: rgba(79, 70, 229, 0.4);
+  
+  --accent-purple: #4f46e5;
+  --accent-cyan: #06b6d4;
+  --accent-pink: #db2777;
+  --accent-blue: #2563eb;
+  
+  --gradient-cyber: linear-gradient(135deg, #4f46e5 0%, #06b6d4 50%, #db2777 100%);
+  --gradient-glow: radial-gradient(circle at 50% 50%, rgba(79, 70, 229, 0.08) 0%, transparent 80%);
+  
+  --card-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
+  --card-glow: 0 4px 20px rgba(79, 70, 229, 0.05);
+  --glow-strength: rgba(79, 70, 229, 0.2);
+
+  --scroll-track: #f1f1f1;
+  --scroll-thumb: #4f46e5;
+  --scroll-thumb-hover: #06b6d4;
+}
+
+/* ==========================================================================
+   BASE RESETS & GLOBALS
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  line-height: 1.6;
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scroll-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scroll-thumb);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scroll-thumb-hover);
+}
+
+/* Background Effects */
+.bg-grid-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background-image: 
+    linear-gradient(rgba(157, 78, 221, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(157, 78, 221, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center center;
+}
+
+.bg-ambient-circles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.ambient-circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.15;
+  mix-blend-mode: screen;
+  animation: floatCircle 20s infinite alternate ease-in-out;
+}
+
+.circle-1 {
+  top: 10%;
+  left: 10%;
+  width: 35vw;
+  height: 35vw;
+  background: var(--accent-purple);
+  animation-duration: 25s;
+}
+
+.circle-2 {
+  bottom: 10%;
+  right: 10%;
+  width: 40vw;
+  height: 40vw;
+  background: var(--accent-cyan);
+  animation-duration: 30s;
+  animation-delay: -5s;
+}
+
+.circle-3 {
+  top: 40%;
+  left: 50%;
+  width: 25vw;
+  height: 25vw;
+  background: var(--accent-pink);
+  animation-duration: 22s;
+  animation-delay: -10s;
+}
+
+/* Scroll Progress Bar */
+.scroll-progress-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  z-index: 1000;
+  background: transparent;
+}
+
+.scroll-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: var(--gradient-cyber);
+  box-shadow: 0 0 8px var(--accent-cyan);
+  transition: width 0.1s ease-out;
+}
+
+/* Typography Helpers */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-title);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.text-gradient {
+  background: var(--gradient-cyber);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Base Layout Containers */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+section {
+  padding: 80px 0;
+  position: relative;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.section-header.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   ANIMATIONS & KEYFRAMES
+   ========================================================================== */
+@keyframes floatCircle {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(80px, 50px) scale(1.1);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+/* Scroll Animation classes triggered by JS intersection observer */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}

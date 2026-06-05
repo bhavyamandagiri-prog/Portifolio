@@ -1,0 +1,171 @@
+/* ==========================================================================
+   AI CHATBOT LOGIC - Bhavya Mandagiri's Portfolio
+   ========================================================================== */
+
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleBtn = document.getElementById('chatbot-toggle');
+  const chatBox = document.getElementById('chatbot-box');
+  const closeBtn = document.getElementById('chatbot-close-btn');
+  const messagesLog = document.getElementById('chatbot-messages-log');
+  const chatForm = document.getElementById('chatbot-form');
+  const inputField = document.getElementById('chatbot-input-field');
+  const suggestionBtns = document.querySelectorAll('.suggest-btn');
+
+  let hasGreeted = false;
+
+  // Toggle Chat Box
+  toggleBtn.addEventListener('click', () => {
+    chatBox.classList.toggle('active');
+    if (chatBox.classList.contains('active') && !hasGreeted) {
+      triggerInitialGreeting();
+    }
+  });
+
+  closeBtn.addEventListener('click', () => {
+    chatBox.classList.remove('active');
+  });
+
+  // Close on Escape key
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && chatBox.classList.contains('active')) {
+      chatBox.classList.remove('active');
+    }
+  });
+
+  // Initial greeting message
+  function triggerInitialGreeting() {
+    hasGreeted = true;
+    showTypingIndicator();
+    
+    setTimeout(() => {
+      removeTypingIndicator();
+      addMessage('bot', "Hello! I'm Bhavya's Portfolio Assistant. Feel free to ask me questions regarding his ECE background, technical project competencies, academic score indices, or contact links. Select a suggestion button below or write in the chat bar!");
+    }, 1200);
+  }
+
+  // Suggestion buttons click handler
+  suggestionBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const query = e.target.dataset.query;
+      const text = e.target.textContent;
+      
+      // Post user message
+      addMessage('user', text);
+      
+      // Process query
+      respondToQuery(query);
+    });
+  });
+
+  // Text Form Submission
+  chatForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const queryText = inputField.value.trim();
+    if (!queryText) return;
+
+    addMessage('user', queryText);
+    inputField.value = '';
+
+    // Match keywords to decide answer
+    respondToText(queryText.toLowerCase());
+  });
+
+  // Answer matching logic for custom text
+  function respondToText(text) {
+    showTypingIndicator();
+
+    let reply = "";
+
+    if (text.includes('skills') || text.includes('tech') || text.includes('language') || text.includes('code') || text.includes('framework')) {
+      reply = "Bhavya is skilled in:\n- **VLSI Design:** Verilog HDL, Xilinx Vivado, VLSI DFT (Design for Testability), LTSpice, protocols (UART/SPI/I2C).\n- **Full Stack Development:** JavaScript (ES6+), React.js, Node.js, Express, MongoDB, SQL, HTML5/CSS3.\n- **AI & ML:** Python, TensorFlow, Flask, OpenCV, CNN models, and Data Analysis.";
+    } else if (text.includes('project') || text.includes('healthcare') || text.includes('system') || text.includes('patient') || text.includes('attendance') || text.includes('curriculum')) {
+      reply = "Key projects include:\n1. **Green Tech AI Healthcare & Monitoring System:** Python/OpenCV/CNN system providing medicine alerts and vitals tracking.\n2. **Patient Health Monitoring System:** Arduino-based ECG & temperature remote telemetry unit.\n3. **Smart Curriculum & Attendance App:** SQLite and responsive management interface.";
+    } else if (text.includes('gpa') || text.includes('cgpa') || text.includes('grade') || text.includes('academics') || text.includes('marks') || text.includes('college')) {
+      reply = "Bhavya is currently studying B.Tech ECE at **Andhra Loyola Institute of Engineering and Technology (ALIET)** (JNTUK affiliated) and holds a cumulative GPA of **8.06/10.00** across 5 semesters, with zero backlogs (First Class with Distinction).";
+    } else if (text.includes('hire') || text.includes('contact') || text.includes('email') || text.includes('linkedin') || text.includes('job') || text.includes('internship') || text.includes('resume')) {
+      reply = "You can contact Bhavya directly at **bhavya.mandagiri.ece@gmail.com**. Her LinkedIn profile is linkedin.com/in/bhavya-mandagiri-106ba02b5 and GitHub is github.com/bhavyamandagiri.";
+    } else if (text.includes('hi') || text.includes('hello') || text.includes('hey')) {
+      reply = "Hello there! How can I assist you with evaluating Bhavya's profile today?";
+    } else {
+      reply = "That's an interesting question! I am best optimized to answer queries regarding Bhavya's ECE training, verified projects, skills, or contact channels. Feel free to try another query or click the quick suggestions!";
+    }
+
+    setTimeout(() => {
+      removeTypingIndicator();
+      addMessage('bot', reply);
+    }, 1000);
+  }
+
+  // Answer matching logic for pre-made queries
+  function respondToQuery(query) {
+    showTypingIndicator();
+    let reply = "";
+
+    switch(query) {
+      case 'skills':
+        reply = "Bhavya's engineering skillset includes:\n- **VLSI Design:** Verilog HDL, Xilinx Vivado, VLSI DFT, LTSpice, SPI/I2C/UART protocols.\n- **Full Stack Development:** JavaScript (ES6+), React.js, Node.js, Express, MongoDB, SQL, HTML5/CSS3.\n- **AI & ML:** Python, TensorFlow, Flask, OpenCV, CNN models, and Data Analysis.";
+        break;
+      case 'projects':
+        reply = "Bhavya's verified projects include:\n- **Green Tech AI Healthcare & Monitoring System** (Python, CNN, OpenCV, Telemetry)\n- **Patient Health Monitoring System** (Arduino, ECG/Temp Sensors, Vital Viz)\n- **Smart Curriculum & Attendance App** (HTML/CSS/JS, SQLite database)";
+        break;
+      case 'contact':
+        reply = "Here are Bhavya's contact details:\n- **Email:** bhavya.mandagiri.ece@gmail.com\n- **LinkedIn:** linkedin.com/in/bhavya-mandagiri-106ba02b5\n- **GitHub:** github.com/bhavyamandagiri\nShe is open to tech internships and placements!";
+        break;
+      case 'cgpa':
+        reply = "Bhavya holds a **8.06 / 10.00 CGPA** (First Class with Distinction, 0 backlogs) at Andhra Loyola Institute of Engineering and Technology (ALIET), affiliated to JNTUK. 5 semesters are fully completed.";
+        break;
+      default:
+        reply = "How can I help you learn more about Bhavya's academic background?";
+    }
+
+    setTimeout(() => {
+      removeTypingIndicator();
+      addMessage('bot', reply);
+    }, 1000);
+  }
+
+  // Helper: Append chat bubble
+  function addMessage(sender, text) {
+    const msgElement = document.createElement('div');
+    msgElement.className = `chat-msg ${sender}`;
+    
+    // Parse markdown-like bullets if present
+    if (text.includes('\n')) {
+      const parsedText = text.split('\n').map(line => {
+        if (line.startsWith('- ') || line.startsWith('* ')) {
+          return `<li>${line.slice(2)}</li>`;
+        }
+        return `<p>${line}</p>`;
+      }).join('');
+      msgElement.innerHTML = parsedText;
+    } else {
+      msgElement.textContent = text;
+    }
+    
+    messagesLog.appendChild(msgElement);
+    scrollToBottom();
+  }
+
+  // Helper: Show typing bubble
+  function showTypingIndicator() {
+    const indicator = document.createElement('div');
+    indicator.className = 'chat-msg bot chat-typing';
+    indicator.id = 'chat-typing-indicator';
+    indicator.innerHTML = '<span></span><span></span><span></span>';
+    messagesLog.appendChild(indicator);
+    scrollToBottom();
+  }
+
+  // Helper: Remove typing bubble
+  function removeTypingIndicator() {
+    const indicator = document.getElementById('chat-typing-indicator');
+    if (indicator) {
+      messagesLog.removeChild(indicator);
+    }
+  }
+
+  // Helper: Auto Scroll Message view
+  function scrollToBottom() {
+    messagesLog.scrollTop = messagesLog.scrollHeight;
+  }
+});
