@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Resume Details Map (Verified Contents Only)
   const resumeDetails = {
     name: 'Bhavya Mandagiri',
-    tagline: 'VLSI Developer | Full Webstack Developer | AI Enthusiast',
+    tagline: 'B.Tech ECE Student | VLSI & Full Stack Developer | AI Enthusiast',
     email: 'bhavya.mandagiri.ece@gmail.com',
     phone: '+91 XXXXX XXXXX',
     location: 'Andhra Pradesh, India',
@@ -40,6 +40,11 @@ document.addEventListener('DOMContentLoaded', () => {
         'Completed a 2-month industrial internship focused on Design for Testability (DFT) in VLSI.',
         'Gained practical exposure to industry workflows and testing methodologies.',
         'Understood real-time semiconductor testing concepts and verification processes.'
+      ]},
+      { role: 'Embedded Systems Intern', company: 'Siliquan Technologies (Short-Term Internship)', duration: 'Dec 2024 - Jan 2025', bullets: [
+        'Working with embedded systems concepts and hardware-software integration.',
+        'Learning microcontrollers, interfacing techniques, and real-time applications.',
+        'Developing practical skills in embedded system design and implementation.'
       ]}
     ]
   };

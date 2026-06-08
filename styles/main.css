@@ -230,6 +230,7 @@ section {
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
+.reveal.active .section-header,
 .section-header.visible {
   opacity: 1;
   transform: translateY(0);

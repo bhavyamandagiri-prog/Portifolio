@@ -45,8 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // 4. Typewriter Effect
   const typewriterElement = document.getElementById('typewriter');
   const phrases = [
-    "VLSI Engineer",
-    "Full Webstack Developer",
+    "B.Tech ECE Student",
+    "VLSI & Full Stack Developer",
     "AI Enthusiast"
   ];
   let phraseIndex = 0;
@@ -149,6 +149,13 @@ document.addEventListener('DOMContentLoaded', () => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('active');
+        
+        // Make the section header visible
+        const header = entry.target.querySelector('.section-header');
+        if (header) {
+          header.classList.add('visible');
+        }
+
         // If it's the timeline, animate child nodes too
         if (entry.target.id === 'extracurriculars') {
           const items = entry.target.querySelectorAll('.timeline-item');
@@ -166,4 +173,205 @@ document.addEventListener('DOMContentLoaded', () => {
   revealElements.forEach(element => {
     observer.observe(element);
   });
+
+  // 9. Code Viewer Modal Logic
+  const codeModal = document.getElementById('code-modal');
+  const codeModalClose = document.getElementById('code-modal-close');
+  const viewCodeBtns = document.querySelectorAll('.view-code-btn');
+  const codeCopyBtn = document.getElementById('code-copy-btn');
+  const arduinoCodeBlock = document.getElementById('arduino-code-block');
+
+  if (codeModal && codeModalClose) {
+    const openCodeModal = () => {
+      codeModal.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Lock background scroll
+    };
+
+    const closeCodeModal = () => {
+      codeModal.classList.remove('active');
+      document.body.style.overflow = ''; // Unlock background scroll
+    };
+
+    viewCodeBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openCodeModal();
+      });
+    });
+
+    codeModalClose.addEventListener('click', closeCodeModal);
+
+    codeModal.addEventListener('click', (e) => {
+      if (e.target === codeModal) {
+        closeCodeModal();
+      }
+    });
+
+    // Copy Code to Clipboard (raw text extraction)
+    if (codeCopyBtn && arduinoCodeBlock) {
+      codeCopyBtn.addEventListener('click', () => {
+        const rawCode = arduinoCodeBlock.textContent;
+        navigator.clipboard.writeText(rawCode).then(() => {
+          // Visual Copied feedback state
+          const originalHTML = codeCopyBtn.innerHTML;
+          codeCopyBtn.innerHTML = '<i data-lucide="check"></i> Copied!';
+          if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+          }
+          codeCopyBtn.style.background = 'rgba(0, 245, 212, 0.2)';
+          codeCopyBtn.style.borderColor = 'var(--accent-cyan)';
+          codeCopyBtn.style.color = 'var(--accent-cyan)';
+
+          setTimeout(() => {
+            codeCopyBtn.innerHTML = originalHTML;
+            if (typeof lucide !== 'undefined') {
+              lucide.createIcons();
+            }
+            codeCopyBtn.style.background = '';
+            codeCopyBtn.style.borderColor = '';
+            codeCopyBtn.style.color = '';
+          }, 2000);
+        }).catch(err => {
+          console.error('Failed to copy text: ', err);
+        });
+      });
+    }
+  }
+
+  // 10. Project Details Modal Logic
+  const detailsModal = document.getElementById('details-modal');
+  const detailsModalClose = document.getElementById('details-modal-close');
+  const viewDetailsBtns = document.querySelectorAll('.view-details-btn');
+  const detailsViewCodeBtn = document.getElementById('details-view-code-btn');
+  const mainPreviewImg = document.getElementById('details-main-img');
+  const previewContainer = document.getElementById('details-preview-container');
+
+  if (detailsModal && detailsModalClose) {
+    const openDetailsModal = () => {
+      detailsModal.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Lock background scroll
+    };
+
+    const closeDetailsModal = () => {
+      detailsModal.classList.remove('active');
+      document.body.style.overflow = ''; // Unlock background scroll
+    };
+
+    viewDetailsBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openDetailsModal();
+      });
+    });
+
+    detailsModalClose.addEventListener('click', closeDetailsModal);
+
+    detailsModal.addEventListener('click', (e) => {
+      if (e.target === detailsModal) {
+        closeDetailsModal();
+      }
+    });
+
+    // Image preview switcher
+    window.switchPreview = function(thumbElement) {
+      const mainImg = document.getElementById('details-main-img');
+      const caption = document.getElementById('gallery-caption');
+      const thumbs = document.querySelectorAll('.thumb-img');
+      
+      if (mainImg && caption) {
+        mainImg.src = thumbElement.src;
+        caption.textContent = thumbElement.dataset.alt;
+        
+        thumbs.forEach(t => t.classList.remove('active'));
+        thumbElement.classList.add('active');
+      }
+    };
+
+    // Transition from details modal to code modal
+    if (detailsViewCodeBtn && codeModal) {
+      detailsViewCodeBtn.addEventListener('click', () => {
+        closeDetailsModal();
+        setTimeout(() => {
+          codeModal.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }, 150);
+      });
+    }
+
+    // Zoom preview image inside Lightbox Modal
+    if (previewContainer && mainPreviewImg) {
+      previewContainer.addEventListener('click', () => {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxTitle = document.getElementById('lightbox-title');
+        const caption = document.getElementById('gallery-caption').textContent;
+
+        if (lightbox && lightboxImg && lightboxTitle) {
+          lightboxImg.src = mainPreviewImg.src;
+          lightboxTitle.textContent = `Patient Health Monitoring System - ${caption}`;
+          lightbox.classList.add('active');
+        }
+      });
+    }
+  }
+
+  // 11. Interactive Card Carousel
+  const carousel = document.getElementById('patient-carousel');
+  if (carousel) {
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    const dots = carousel.querySelectorAll('.dot');
+    const prevBtn = carousel.querySelector('.prev-btn');
+    const nextBtn = carousel.querySelector('.next-btn');
+    let currentIndex = 0;
+
+    const showSlide = (index) => {
+      slides.forEach(slide => slide.classList.remove('active'));
+      dots.forEach(dot => dot.classList.remove('active'));
+      
+      slides[index].classList.add('active');
+      dots[index].classList.add('active');
+      currentIndex = index;
+    };
+
+    const nextSlide = () => {
+      let next = (currentIndex + 1) % slides.length;
+      showSlide(next);
+    };
+
+    const prevSlide = () => {
+      let prev = (currentIndex - 1 + slides.length) % slides.length;
+      showSlide(prev);
+    };
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        nextSlide();
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        prevSlide();
+      });
+    }
+
+    dots.forEach((dot, idx) => {
+      dot.addEventListener('click', (e) => {
+        e.stopPropagation();
+        showSlide(idx);
+      });
+    });
+
+    // Auto-advance slides every 5 seconds
+    let autoPlay = setInterval(nextSlide, 5000);
+
+    carousel.addEventListener('mouseenter', () => clearInterval(autoPlay));
+    carousel.addEventListener('mouseleave', () => {
+      clearInterval(autoPlay);
+      autoPlay = setInterval(nextSlide, 5000);
+    });
+  }
+
 });

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bhavya Mandagiri | VLSI, Full Webstack & AI Developer Portfolio</title>
-  <meta name="description" content="Academic and developer portfolio of Bhavya Mandagiri, a B.Tech ECE student specializing in VLSI, Full Webstack Development, and AI.">
+  <title>Bhavya Mandagiri | B.Tech ECE Student, VLSI & Full Stack Developer and AI Enthusiast</title>
+  <meta name="description" content="Academic and developer portfolio of Bhavya Mandagiri, a B.Tech ECE student specializing in VLSI, Full Stack Development, and AI.">
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,8 +12,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- CSS Stylesheets -->
-  <link rel="stylesheet" href="styles/main.css">
-  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/main.css?v=2.8">
+  <link rel="stylesheet" href="styles/components.css?v=2.8">
 </head>
 <body>
 
@@ -51,10 +51,9 @@
         <ul class="nav-links" id="nav-links">
           <li><a href="#hero" class="active">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#academics">Academics</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#achievements">Achievements</a></li>
-          <li><a href="#certificates">Certificates</a></li>
+          <li><a href="#certificates">Credentials</a></li>
           <li><a href="#extracurriculars">Timeline</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -84,8 +83,12 @@
         <div class="typewriter-container">
           <h2 id="typewriter" class="text-gradient" style="font-size: 1.8rem; font-weight: 600;"></h2>
         </div>
+        <!-- ECE Copper PCB Trace Style Pulse Divider -->
+        <div class="circuit-divider" style="margin: 25px 0; position: relative; width: 100%; max-width: 250px; height: 2px; background: rgba(255, 255, 255, 0.05); border-radius: 1px; overflow: hidden;">
+          <div class="circuit-pulse" style="position: absolute; left: -100%; top: 0; width: 80px; height: 100%; background: linear-gradient(90deg, transparent, var(--accent-cyan), transparent); animation: circuitFlow 3s infinite linear;"></div>
+        </div>
         <p class="hero-tagline">
-          Developing high-performance full-stack web applications, designing optimized VLSI systems, and implementing intelligent AI models.
+          B.Tech ECE Student, VLSI & Full Stack Developer, and AI Enthusiast.
         </p>
         <div class="hero-cta">
           <a href="#resume" class="btn btn-primary">
@@ -109,125 +112,293 @@
         </div>
       </div>
     </div>
+    
+    <!-- Floating Scroll-down Indicator -->
+    <a href="#about" class="scroll-down-indicator" aria-label="Scroll to System Overview">
+      <span class="scroll-text">SCROLL TO SYSTEM CORE</span>
+      <div class="mouse-icon">
+        <div class="wheel"></div>
+      </div>
+    </a>
   </section>
 
   <!-- About Me Section -->
   <section id="about" class="reveal">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title text-gradient">About Me</h2>
+        <span class="section-pretitle" style="display: block; font-size: 0.9rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent-cyan); margin-bottom: 10px;">Identity & Mission</span>
+        <h2 class="section-title text-gradient">System Overview</h2>
         <p class="section-subtitle">The background, vision, and core skillset driving my academic and professional journey.</p>
       </div>
       
       <div class="about-wrapper">
         <div class="about-bio">
-          <h3 style="font-size: 1.8rem; margin-bottom: 15px;">Transforming Ideas Into Silicon & Software</h3>
-          <p>
-            I am a 3rd-year B.Tech Electronics and Communication Engineering (ECE) student at Andhra Loyola Institute of Engineering and Technology (ALIET), affiliated with JNTUK. My training focuses on VLSI systems and digital electronics, which I combine with modern full-stack web development and artificial intelligence models.
-          </p>
-          <p>
-            I specialize in designing VLSI circuits, coding full-stack web applications, and building AI models. I am highly interested in VLSI DFT (Design for Testability), software architecture, and AI integrations, aiming to create innovative tech solutions for top-tier companies.
-          </p>
-          <div class="about-motivation">
-            "I believe the future of computing lies at the convergence of smart systems and scalable web infrastructures. My drive is to build technologies that feel invisible but make the world work better."
+          <!-- Cyber System Overview Card -->
+          <div class="glass-card system-card" style="position: relative; padding: 30px; border-radius: 16px; margin-bottom: 30px; background: rgba(10, 6, 20, 0.4); border: 1px solid rgba(157, 78, 221, 0.2); box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); overflow: hidden;">
+            <!-- Ambient Card Glow -->
+            <div class="card-glow" style="position: absolute; top: -10%; left: -10%; width: 120%; height: 120%; background: radial-gradient(circle, rgba(0, 245, 212, 0.03) 0%, transparent 70%); pointer-events: none; z-index: 0;"></div>
+            
+            <div style="position: relative; z-index: 1;">
+              <!-- Comment Line -->
+              <div style="font-family: monospace; color: var(--accent-pink); font-size: 0.9rem; margin-bottom: 20px; letter-spacing: 1px;">
+                // BHAVYA_SYSTEM_PROFILE
+              </div>
+              
+              <!-- Terminal Prompt -->
+              <div style="background: rgba(4, 2, 9, 0.6); border: 1px solid rgba(0, 245, 212, 0.15); border-radius: 8px; padding: 12px 20px; font-family: monospace; color: var(--text-primary); font-size: 1.1rem; margin-bottom: 15px; display: inline-flex; align-items: center; gap: 8px; max-width: 100%;">
+                <span style="color: var(--accent-cyan); font-weight: bold;">&gt;</span> Hello, I'm <span class="text-gradient" style="font-weight: bold; font-family: var(--font-title);">Bhavya</span><span class="blinking-cursor">|</span>
+              </div>
+              
+              <!-- Loader Subtext -->
+              <div style="font-family: monospace; color: var(--accent-cyan); font-size: 0.8rem; margin-bottom: 25px; letter-spacing: 2px; text-transform: uppercase;">
+                INITIALIZING SYSTEM CORE...<span class="loader-dot"></span>
+              </div>
+              
+              <!-- Grid of System Details (2x2) -->
+              <div class="system-details-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 25px;">
+                <!-- Specialty -->
+                <div class="system-detail-box" style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); padding: 15px; border-radius: 10px; display: flex; align-items: center; gap: 12px; transition: all 0.3s ease;">
+                  <div class="detail-icon" style="color: var(--accent-pink); background: rgba(255, 0, 127, 0.08); width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">
+                    <i data-lucide="layers"></i>
+                  </div>
+                  <div>
+                    <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; font-family: monospace;">Specialty</div>
+                    <div style="font-size: 0.95rem; font-weight: 600; color: var(--text-primary);">VLSI & Full Stack</div>
+                  </div>
+                </div>
+                
+                <!-- Location -->
+                <div class="system-detail-box" style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); padding: 15px; border-radius: 10px; display: flex; align-items: center; gap: 12px; transition: all 0.3s ease;">
+                  <div class="detail-icon" style="color: var(--accent-cyan); background: rgba(0, 245, 212, 0.08); width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">
+                    <i data-lucide="map-pin"></i>
+                  </div>
+                  <div>
+                    <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; font-family: monospace;">Location</div>
+                    <div style="font-size: 0.95rem; font-weight: 600; color: var(--text-primary);">Vijayawada, AP</div>
+                  </div>
+                </div>
+                
+                <!-- Experience -->
+                <div class="system-detail-box" style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); padding: 15px; border-radius: 10px; display: flex; align-items: center; gap: 12px; transition: all 0.3s ease;">
+                  <div class="detail-icon" style="color: var(--accent-purple); background: rgba(157, 78, 221, 0.08); width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">
+                    <i data-lucide="briefcase"></i>
+                  </div>
+                  <div>
+                    <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; font-family: monospace;">Experience</div>
+                    <div style="font-size: 0.95rem; font-weight: 600; color: var(--text-primary);">VLSI DFT Intern</div>
+                  </div>
+                </div>
+                
+                <!-- Degree -->
+                <div class="system-detail-box" style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); padding: 15px; border-radius: 10px; display: flex; align-items: center; gap: 12px; transition: all 0.3s ease;">
+                  <div class="detail-icon" style="color: var(--accent-cyan); background: rgba(0, 245, 212, 0.08); width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">
+                    <i data-lucide="graduation-cap"></i>
+                  </div>
+                  <div>
+                    <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; font-family: monospace;">Degree</div>
+                    <div style="font-size: 0.95rem; font-weight: 600; color: var(--text-primary);">B.Tech ECE</div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Action Buttons -->
+              <div style="display: flex; flex-direction: column; gap: 10px;">
+                <a href="#projects" class="btn btn-primary" style="width: 100%; border-radius: 8px; padding: 10px; font-size: 0.9rem; font-family: monospace; background: var(--gradient-cyber); box-shadow: 0 4px 12px rgba(0, 245, 212, 0.15); border: none;">
+                  VIEW PROJECTS <i data-lucide="arrow-up-right" style="width: 16px; height: 16px;"></i>
+                </a>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                  <a href="#resume" class="btn btn-secondary" style="border-radius: 8px; padding: 10px; font-size: 0.85rem; font-family: monospace; display: inline-flex; align-items: center; justify-content: center; gap: 6px;">
+                    <i data-lucide="download" style="width: 14px; height: 14px;"></i> DOWNLOAD CV
+                  </a>
+                  <button id="system-comms-btn" class="btn btn-secondary" style="border-radius: 8px; padding: 10px; font-size: 0.85rem; font-family: monospace; display: inline-flex; align-items: center; justify-content: center; gap: 6px; background: transparent; border: 1px solid var(--border-color); color: var(--text-primary);">
+                    <span style="color: var(--accent-cyan); font-weight: bold;">&gt;_</span> COMMS
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        
-        <div class="skills-wrapper">
-          <h3 style="font-size: 1.5rem; margin-bottom: 20px;">Technical Skills</h3>
           
-          <div class="skill-category">
-            <span class="skill-category-title"><i data-lucide="layers"></i> VLSI Design</span>
-            <div class="skills-grid">
-              <span class="skill-tag">Verilog HDL</span>
-              <span class="skill-tag">Xilinx Vivado</span>
-              <span class="skill-tag">VLSI DFT</span>
-              <span class="skill-tag">LTSpice</span>
-              <span class="skill-tag">Digital Electronics</span>
-              <span class="skill-tag">UART / SPI / I2C</span>
-            </div>
-          </div>
-
-          <div class="skill-category">
-            <span class="skill-category-title"><i data-lucide="code"></i> Full Stack Development</span>
-            <div class="skills-grid">
-              <span class="skill-tag">JavaScript (ES6+)</span>
-              <span class="skill-tag">HTML5 / CSS3</span>
-              <span class="skill-tag">React.js</span>
-              <span class="skill-tag">Node.js / Express</span>
-              <span class="skill-tag">MongoDB / SQL</span>
-              <span class="skill-tag">Git / GitHub</span>
-            </div>
-          </div>
-          
-          <div class="skill-category">
-            <span class="skill-category-title"><i data-lucide="brain-circuit"></i> AI & ML</span>
-            <div class="skills-grid">
-              <span class="skill-tag">Python</span>
-              <span class="skill-tag">TensorFlow</span>
-              <span class="skill-tag">Scikit-learn</span>
-              <span class="skill-tag">OpenCV</span>
-              <span class="skill-tag">Data Analysis</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Academic Profile Section -->
-  <section id="academics" class="reveal">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title text-gradient">Academic Profile</h2>
-        <p class="section-subtitle">Real-time academic performance dashboard and core curriculum tracking.</p>
-      </div>
-      
-      <div class="academic-dashboard">
-        <!-- Interactive CGPA Card -->
-        <div class="glass-card dashboard-summary">
-          <div class="cgpa-gauge-container">
-            <svg class="cgpa-svg" viewBox="0 0 200 200">
-              <defs>
-                <linearGradient id="dash-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stop-color="#00f5d4" />
-                  <stop offset="100%" stop-color="#9d4edd" />
-                </linearGradient>
-              </defs>
-              <circle class="cgpa-track" cx="100" cy="100" r="84" />
-              <circle class="cgpa-indicator" id="cgpa-gauge" cx="100" cy="100" r="84" />
-            </svg>
-            <div class="cgpa-value-overlay">
-              <span class="cgpa-number">
-                <input type="number" id="cgpa-input" value="8.06" min="0" max="10.00" step="0.01" aria-label="CGPA Value">
-              </span>
-              <span class="cgpa-max">/ 10.00 CGPA</span>
-            </div>
-          </div>
-          
-          <div class="dashboard-info">
-            <h3 class="dashboard-details-title">B.Tech ECE Student</h3>
-            <p class="dashboard-college">Andhra Loyola Institute of Engineering & Technology</p>
-            <p class="dashboard-affiliation">Affiliated to JNTUK | Vijayawada West, AP, India</p>
-            <p class="dashboard-affiliation" style="margin-top: 15px; color: var(--accent-cyan); font-weight: 500; font-size: 0.8rem;">
-              <i data-lucide="info" style="width: 14px; height: 14px; vertical-align: middle;"></i> Click the CGPA number to simulate updates!
+          <!-- Bio Paragraphs in Center-Aligned Cyber System Format -->
+          <div style="text-align: center; margin-top: 25px;">
+            <p style="font-size: 1.05rem; line-height: 1.6; margin-bottom: 20px; color: var(--text-secondary);">
+              I am a 3rd-year <strong style="color: var(--text-primary);">B.Tech student in Electronics and Communication Engineering</strong> at Andhra Loyola Institute of Engineering and Technology, with a strong interest in both hardware and software technologies, particularly VLSI Design, Full Stack Development, and Artificial Intelligence.
             </p>
+            
+            <p style="font-size: 1.05rem; line-height: 1.6; margin-bottom: 20px; color: var(--text-secondary);">
+              I work at the intersection of <span style="color: var(--accent-cyan); font-weight: 600;">VLSI Design, Full Stack Development, and Artificial Intelligence</span>. My academic journey has strengthened my foundation in digital electronics, programming, web technologies, and AI-driven applications, while encouraging me to continuously learn and adapt to emerging technologies.
+            </p>
+            
+            <p style="font-size: 1.05rem; line-height: 1.6; margin-bottom: 20px; color: var(--text-secondary);">
+              Within college, I am actively involved in the <strong style="color: var(--text-primary);">Euphosiss Voice Club</strong> and regularly participate in technical quizzes, paper presentations, and technical events that enhance my problem-solving, teamwork, and communication skills. I have developed proficiency in C, Python, and modern development tools, enabling me to work across both hardware-oriented and software-oriented projects.
+            </p>
+            
+            <p style="font-size: 1.05rem; line-height: 1.6; margin-bottom: 20px; color: var(--text-secondary);">
+              Beyond core digital hardware, I actively build <span style="color: var(--accent-cyan); font-weight: 600;">modern, web-based engineering tools</span> and AI models — bridging the gap between physical systems, digital hardware, and modern software with scalable, interactive solutions.
+            </p>
+            
+            <!-- Bottom CTA Box styled exactly like the screenshot -->
+            <div style="margin-top: 35px; padding: 20px; border-radius: 12px; background: rgba(0, 245, 212, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-left: 4px solid var(--accent-cyan); box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2); text-align: center;">
+              <p style="margin: 0; font-size: 0.95rem; font-weight: 500; color: var(--text-primary); line-height: 1.5;">
+                Open to internships, entry-level placement roles, and collaborative projects where hardware meets software. Let's build something meaningful.
+              </p>
+            </div>
           </div>
         </div>
         
-        <!-- Semester breakdown -->
-        <div class="glass-card" style="padding: 25px;">
-          <h3 style="margin-bottom: 20px; font-size: 1.3rem; display: flex; align-items: center; gap: 10px;">
-            <i data-lucide="bar-chart-3" style="color: var(--accent-cyan);"></i> Semester Analytics Breakdown
-          </h3>
-          <div class="semester-cards-container" id="semester-list">
-            <!-- Semester Cards injected by JS -->
+        <div class="skills-wrapper" style="max-width: 1100px; margin: 0 auto; width: 100%;">
+          <span class="section-pretitle" style="display: block; font-size: 0.9rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent-cyan); margin-bottom: 10px; text-align: center;">Skills Inventory</span>
+          <h3 style="font-size: 2.2rem; margin-bottom: 10px; text-align: center;" class="text-gradient">Technical Skills</h3>
+          <p style="color: var(--text-muted); text-align: center; font-size: 0.95rem; margin-bottom: 45px; max-width: 600px; margin-left: auto; margin-right: auto;">
+            A structured breakdown of my competencies across hardware engineering, web development, and intelligent systems.
+          </p>
+          
+          <div class="skills-grid-container">
+            
+            <!-- Card 1: VLSI Design -->
+            <div class="skill-card skill-pink">
+              <div class="skill-header">
+                <div class="skill-icon-wrap">
+                  <i data-lucide="cpu"></i>
+                </div>
+                <span class="skill-status-dot pink"></span>
+              </div>
+              <h4 class="skill-title">VLSI Design & Hardware</h4>
+              <div class="skills-grid">
+                <span class="skill-tag">Verilog HDL</span>
+                <span class="skill-tag">Xilinx Vivado</span>
+                <span class="skill-tag">VLSI DFT</span>
+                <span class="skill-tag">LTSpice</span>
+                <span class="skill-tag">Digital Electronics</span>
+                <span class="skill-tag">UART / SPI / I2C</span>
+              </div>
+            </div>
+
+            <!-- Card 2: Embedded Systems -->
+            <div class="skill-card skill-cyan">
+              <div class="skill-header">
+                <div class="skill-icon-wrap">
+                  <i data-lucide="layers"></i>
+                </div>
+                <span class="skill-status-dot cyan"></span>
+              </div>
+              <h4 class="skill-title">Embedded Systems & Hardware</h4>
+              <div class="skills-grid">
+                <span class="skill-tag">ESP32</span>
+                <span class="skill-tag">ESP8266</span>
+                <span class="skill-tag">Arduino</span>
+                <span class="skill-tag">Sensors & Actuators</span>
+              </div>
+            </div>
+
+            <!-- Card 3: Internet of Things -->
+            <div class="skill-card skill-purple">
+              <div class="skill-header">
+                <div class="skill-icon-wrap">
+                  <i data-lucide="wifi"></i>
+                </div>
+                <span class="skill-status-dot purple"></span>
+              </div>
+              <h4 class="skill-title">Internet of Things</h4>
+              <div class="skills-grid">
+                <span class="skill-tag">IoT System Design</span>
+                <span class="skill-tag">Cloud Integration</span>
+                <span class="skill-tag">Real Monitoring</span>
+              </div>
+            </div>
+
+            <!-- Card 4: Full Stack -->
+            <div class="skill-card skill-pink">
+              <div class="skill-header">
+                <div class="skill-icon-wrap">
+                  <i data-lucide="code-2"></i>
+                </div>
+                <span class="skill-status-dot pink"></span>
+              </div>
+              <h4 class="skill-title">Full Stack Development</h4>
+              <div class="skills-grid">
+                <span class="skill-tag">JavaScript (ES6+)</span>
+                <span class="skill-tag">HTML5 / CSS3</span>
+                <span class="skill-tag">React.js</span>
+                <span class="skill-tag">Node.js / Express</span>
+                <span class="skill-tag">MongoDB / SQL</span>
+                <span class="skill-tag">Git / GitHub</span>
+              </div>
+            </div>
+
+            <!-- Card 5: App Development -->
+            <div class="skill-card skill-cyan">
+              <div class="skill-header">
+                <div class="skill-icon-wrap">
+                  <i data-lucide="smartphone"></i>
+                </div>
+                <span class="skill-status-dot cyan"></span>
+              </div>
+              <h4 class="skill-title">App Development</h4>
+              <div class="skills-grid">
+                <span class="skill-tag">React Native</span>
+                <span class="skill-tag">Expo</span>
+              </div>
+            </div>
+
+            <!-- Card 6: AI & ML -->
+            <div class="skill-card skill-purple">
+              <div class="skill-header">
+                <div class="skill-icon-wrap">
+                  <i data-lucide="brain"></i>
+                </div>
+                <span class="skill-status-dot purple"></span>
+              </div>
+              <h4 class="skill-title">AI & ML</h4>
+              <div class="skills-grid">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">TensorFlow</span>
+                <span class="skill-tag">Scikit-learn</span>
+                <span class="skill-tag">OpenCV</span>
+                <span class="skill-tag">Data Analysis</span>
+              </div>
+            </div>
+
+            <!-- Card 7: Database -->
+            <div class="skill-card skill-pink">
+              <div class="skill-header">
+                <div class="skill-icon-wrap">
+                  <i data-lucide="database"></i>
+                </div>
+                <span class="skill-status-dot pink"></span>
+              </div>
+              <h4 class="skill-title">Database</h4>
+              <div class="skills-grid">
+                <span class="skill-tag">Firebase</span>
+                <span class="skill-tag">Firestore</span>
+              </div>
+            </div>
+
+            <!-- Card 8: Dev Tools -->
+            <div class="skill-card skill-cyan">
+              <div class="skill-header">
+                <div class="skill-icon-wrap">
+                  <i data-lucide="wrench"></i>
+                </div>
+                <span class="skill-status-dot cyan"></span>
+              </div>
+              <h4 class="skill-title">Development Tools</h4>
+              <div class="skills-grid">
+                <span class="skill-tag">Arduino</span>
+                <span class="skill-tag">MATLAB</span>
+                <span class="skill-tag">LabVIEW</span>
+                <span class="skill-tag">GitHub</span>
+                <span class="skill-tag">VS Code</span>
+              </div>
+            </div>
+
           </div>
         </div>
-
       </div>
     </div>
   </section>
+
+
 
   <!-- Projects Section -->
   <section id="projects" class="reveal">
@@ -269,14 +440,25 @@
         <!-- Project 2 -->
         <div class="glow-card-container">
           <div class="glass-card project-card">
-            <div class="project-thumbnail">
-              <img src="images/patient.png" alt="Patient Health Monitoring System">
+            <div class="project-thumbnail project-carousel" id="patient-carousel">
+              <div class="carousel-track">
+                <img src="images/patient_poster.png" alt="Team and Poster Presentation" class="carousel-slide active">
+                <img src="images/patient_hardware.png" class="carousel-slide" alt="Real-time ECG & Temp Telemetry Circuit">
+                <img src="images/patient_group.png" class="carousel-slide" alt="Team working on the Arduino system">
+              </div>
+              <button class="carousel-btn prev-btn" aria-label="Previous Slide">&lt;</button>
+              <button class="carousel-btn next-btn" aria-label="Next Slide">&gt;</button>
+              <div class="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
             </div>
             <div class="project-body">
               <div class="project-icon"><i data-lucide="activity"></i></div>
-              <h3 class="project-title">Patient Health Monitoring System</h3>
+              <h3 class="project-title">Patient Health Monitoring System Using Arduino</h3>
               <p class="project-desc">
-                Built an Arduino-based real-time patient monitoring system using temperature and ECG sensors. Enabled continuous vital monitoring with remote healthcare data visualization.
+                Developed for <strong>Invothon 2k25</strong>, this Arduino-based real-time patient monitoring system tracks vital health parameters (ECG, temperature) and displays data locally on an LCD or streams it wirelessly to remote systems.
               </p>
               <div class="project-tech">
                 <span>Arduino</span>
@@ -289,6 +471,12 @@
                 <a href="https://github.com/bhavyamandagiri/patient-health-monitor" target="_blank" class="project-link">
                   <i data-lucide="github"></i> Repository
                 </a>
+                <button class="project-link view-details-btn" data-project="patient-monitor">
+                  <i data-lucide="info"></i> System Details
+                </button>
+                <button class="project-link view-code-btn" data-project="patient-monitor">
+                  <i data-lucide="code-2"></i> View Code
+                </button>
               </div>
             </div>
           </div>
@@ -324,47 +512,36 @@
     </div>
   </section>
 
-  <!-- Achievements Section -->
+
+
+  <!-- Achievements Showcase Section -->
   <section id="achievements" class="reveal">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title text-gradient">Achievements & Recognition</h2>
-        <p class="section-subtitle">Milestones and certifications that demonstrate my dedication to continuous technical growth.</p>
+        <h2 class="section-title text-gradient">Achievements Showcase</h2>
+        <p class="section-subtitle">Trophies, certificates, and professional recognition validating my technical excellence.</p>
       </div>
       
-      <div class="achievements-grid">
-        <div class="glass-card achievement-card">
-          <div class="achievement-badge"><i data-lucide="award"></i></div>
-          <h3 class="achievement-title">EPISTEMICON 2025 (2nd Prize)</h3>
-          <p class="achievement-desc">Won 2nd Prize at the Project Expo of EPISTEMICON 2025, a National-Level Technical Symposium hosted at Andhra Loyola Institute of Engineering and Technology.</p>
-        </div>
-
-        <div class="glass-card achievement-card">
-          <div class="achievement-badge" style="background: rgba(0, 245, 212, 0.1); border-color: rgba(0, 245, 212, 0.2); color: var(--accent-cyan);"><i data-lucide="award"></i></div>
-          <h3 class="achievement-title">VBYLD 2026 Delegate</h3>
-          <p class="achievement-desc">Selected and participated as a delegate in the Viksit Bharat Young Leaders Dialogue (VBYLD) 2026, organized by the Ministry of Youth Affairs & Sports (MYBharat).</p>
-        </div>
-
-        <div class="glass-card achievement-card">
-          <div class="achievement-badge" style="background: rgba(157, 78, 221, 0.1); border-color: rgba(157, 78, 221, 0.2); color: var(--accent-purple);"><i data-lucide="award"></i></div>
-          <h3 class="achievement-title">Industrial IoT Workshop</h3>
-          <p class="achievement-desc">Participated and completed the intensive Two-Day Workshop on Industrial IoT conducted at Andhra Loyola Institute of Engineering and Technology in Feb 2025.</p>
-        </div>
+      <!-- Grid -->
+      <div class="gallery-grid" id="achievements-grid">
+        <!-- Achievements dynamically generated by JS -->
       </div>
     </div>
   </section>
 
-  <!-- Certificates Gallery Section -->
+
+
+  <!-- Credentials Dashboard Section -->
   <section id="certificates" class="reveal">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title text-gradient">Certificates Gallery</h2>
+        <h2 class="section-title text-gradient">Credentials Dashboard</h2>
         <p class="section-subtitle">Credential records validating my technical skillset and continuing learning.</p>
       </div>
       
       <!-- Filters -->
       <div class="gallery-filters">
-        <button class="filter-btn active" data-filter="all">All Certificates</button>
+        <button class="filter-btn active" data-filter="all">All Credentials</button>
         <button class="filter-btn" data-filter="coding">Coding & Software</button>
         <button class="filter-btn" data-filter="hackathons">Hackathons</button>
         <button class="filter-btn" data-filter="workshops">Workshops & ECE</button>
@@ -389,52 +566,230 @@
     </div>
   </div>
 
+  <!-- Code Viewer Modal -->
+  <div class="code-modal" id="code-modal">
+    <div class="code-modal-content">
+      <div class="code-modal-header">
+        <div class="code-modal-title">
+          <i data-lucide="code-2"></i>
+          <span>Arduino Sketch: Patient Health Monitoring System</span>
+        </div>
+        <div class="code-modal-actions">
+          <button class="code-copy-btn" id="code-copy-btn">
+            <i data-lucide="copy"></i> Copy Code
+          </button>
+          <button class="code-modal-close" id="code-modal-close">&times;</button>
+        </div>
+      </div>
+      <div class="code-modal-body">
+        <pre><code class="arduino-code" id="arduino-code-block"><span class="code-directive">#include</span> <span class="code-header">&lt;Wire.h&gt;</span>
+<span class="code-directive">#include</span> <span class="code-header">&lt;LiquidCrystal_I2C.h&gt;</span>
+
+<span class="code-comment">// Define LCD with I2C address (commonly 0x27) and dimensions (20 columns x 4 rows)</span>
+<span class="code-type">LiquidCrystal_I2C</span> <span class="code-class">lcd</span>(<span class="code-number">0x27</span>, <span class="code-number">20</span>, <span class="code-number">4</span>);
+
+<span class="code-comment">// Sensor pin definitions</span>
+<span class="code-modifier">const</span> <span class="code-type">int</span> <span class="code-var">ecgPin</span> = <span class="code-keyword">A0</span>;  <span class="code-comment">// ECG sensor analog input</span>
+<span class="code-modifier">const</span> <span class="code-type">int</span> <span class="code-var">lm35Pin</span> = <span class="code-keyword">A1</span>; <span class="code-comment">// LM35 temperature sensor analog input</span>
+
+<span class="code-type">void</span> <span class="code-function">setup</span>() 
+{
+  <span class="code-keyword">Serial</span>.<span class="code-function">begin</span>(<span class="code-number">9600</span>);
+  
+  <span class="code-comment">// Initialize the I2C LCD</span>
+  <span class="code-var">lcd</span>.<span class="code-function">init</span>();
+  <span class="code-var">lcd</span>.<span class="code-function">backlight</span>();
+  <span class="code-var">lcd</span>.<span class="code-function">clear</span>();
+}
+
+<span class="code-type">void</span> <span class="code-function">loop</span>() 
+{
+  <span class="code-comment">// Read ECG sensor value from analog pin</span>
+  <span class="code-type">int</span> <span class="code-var">ecgValue</span> = <span class="code-function">analogRead</span>(<span class="code-var">ecgPin</span>);
+  
+  <span class="code-comment">// Read LM35 sensor value and convert to temperature in Celsius.</span>
+  <span class="code-comment">// LM35 outputs 10 mV/°C and analogRead gives a value from 0 to 1023 for 0-5V.</span>
+  <span class="code-type">int</span> <span class="code-var">lm35Value</span> = <span class="code-function">analogRead</span>(<span class="code-var">lm35Pin</span>);
+  <span class="code-type">float</span> <span class="code-var">temperatureC</span> = <span class="code-var">lm35Value</span> * (<span class="code-number">5.0</span> / <span class="code-number">1023.0</span>) * <span class="code-number">100.0</span>;
+
+  <span class="code-comment">// Update LCD display with ECG and temperature values</span>
+  <span class="code-var">lcd</span>.<span class="code-function">clear</span>();
+  <span class="code-var">lcd</span>.<span class="code-function">setCursor</span>(<span class="code-number">0</span>, <span class="code-number">0</span>);
+  <span class="code-var">lcd</span>.<span class="code-function">print</span>(<span class="code-string">"ECG: "</span>);
+  <span class="code-var">lcd</span>.<span class="code-function">print</span>(<span class="code-var">ecgValue</span>);
+  
+  <span class="code-var">lcd</span>.<span class="code-function">setCursor</span>(<span class="code-number">0</span>, <span class="code-number">1</span>);
+  <span class="code-var">lcd</span>.<span class="code-function">print</span>(<span class="code-string">"Temp: "</span>);
+  <span class="code-var">lcd</span>.<span class="code-function">print</span>(<span class="code-var">temperatureC</span>, <span class="code-number">1</span>);
+  <span class="code-var">lcd</span>.<span class="code-function">print</span>(<span class="code-string">" C"</span>);
+
+  <span class="code-comment">// Output the ECG value to Serial for plotting.</span>
+  <span class="code-comment">// The Serial Plotter works best when a line contains only a numeric value.</span>
+  <span class="code-keyword">Serial</span>.<span class="code-function">println</span>(<span class="code-var">ecgValue</span>);
+  
+  <span class="code-function">delay</span>(<span class="code-number">10</span>); <span class="code-comment">// Small delay for smooth updating</span>
+}</code></pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project Details Modal -->
+  <div class="project-details-modal" id="details-modal">
+    <div class="details-modal-content">
+      <div class="details-modal-header">
+        <div class="details-modal-title">
+          <i data-lucide="activity"></i>
+          <span>Patient Health Monitoring System</span>
+        </div>
+        <button class="details-modal-close" id="details-modal-close">&times;</button>
+      </div>
+      <div class="details-modal-body">
+        <div class="details-grid">
+          <!-- Left: Media Gallery -->
+          <div class="details-gallery">
+            <div class="main-preview-container" id="details-preview-container" title="Click to zoom image">
+              <img id="details-main-img" src="images/patient_poster.png" alt="Team and Poster Presentation" class="details-preview-img">
+            </div>
+            <div class="gallery-thumbs">
+              <img src="images/patient_poster.png" class="thumb-img active" data-alt="Team and Poster Presentation" onclick="switchPreview(this)">
+              <img src="images/patient_hardware.png" class="thumb-img" data-alt="Real-time ECG & Temp Telemetry Circuit" onclick="switchPreview(this)">
+              <img src="images/patient_waveform.png" class="thumb-img" data-alt="ECG Signal Waveform Reference" onclick="switchPreview(this)">
+            </div>
+            <p class="gallery-caption" id="gallery-caption">Team and Poster Presentation</p>
+          </div>
+          
+          <!-- Right: Information -->
+          <div class="details-info">
+            <div class="info-section">
+              <h4><i data-lucide="target" class="info-icon"></i> Project Aim</h4>
+              <p>
+                To design and develop an Arduino-based patient health monitoring system that continuously tracks and monitors vital parameters (heart rate, body temperature, blood pressure) in real time, enabling early detection of medical anomalies and sending telemetry logs for emergency alerts.
+              </p>
+            </div>
+            
+            <div class="info-section">
+              <h4><i data-lucide="check-circle" class="info-icon"></i> Key Objectives</h4>
+              <ul class="objectives-list">
+                <li>
+                  <span class="objective-num">1</span>
+                  <div>
+                    <strong>Real-Time Monitoring:</strong> Continuously track vital health parameters of a patient using integrated sensors.
+                  </div>
+                </li>
+                <li>
+                  <span class="objective-num">2</span>
+                  <div>
+                    <strong>Wireless Data Transmission:</strong> Leverage Wi-Fi, Bluetooth, or GSM telemetry to stream logs to a cloud platform or mobile application.
+                  </div>
+                </li>
+                <li>
+                  <span class="objective-num">3</span>
+                  <div>
+                    <strong>Intelligent Alert System:</strong> Automatically generate emergency alerts in case of abnormal patient readings for timely medical intervention.
+                  </div>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="details-meta-grid">
+              <div class="meta-item">
+                <span class="meta-label">Architecture</span>
+                <span class="meta-value">Arduino / Telemetry</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Sensors Interfaced</span>
+                <span class="meta-value">ECG (Analog) & LM35 (Temp)</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Presented At</span>
+                <span class="meta-value">Invothon 2k25</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="details-modal-footer">
+        <a href="https://github.com/bhavyamandagiri/patient-health-monitor" target="_blank" class="details-action-btn">
+          <i data-lucide="github"></i> Repository
+        </a>
+        <button class="details-action-btn" id="details-view-code-btn">
+          <i data-lucide="code-2"></i> View Code
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- Timeline (Extracurricular) Section -->
   <section id="extracurriculars" class="reveal">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title text-gradient">Activities & Timeline</h2>
-        <p class="section-subtitle">Key technical milestones, participations, and academic dialogues.</p>
+        <span class="section-pretitle" style="display: block; font-size: 0.9rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent-cyan); margin-bottom: 10px;">// System Logs</span>
+        <h2 class="section-title text-gradient">System Timeline</h2>
+        <p class="section-subtitle">Key technical milestones, academic achievements, and professional participations.</p>
       </div>
       
       <div class="timeline" id="timeline">
-        <div class="timeline-item left">
-          <div class="timeline-icon"><i data-lucide="award"></i></div>
+        <!-- Item 0: B.Tech ECE -->
+        <div class="timeline-item accent-purple">
+          <div class="timeline-icon"><i data-lucide="graduation-cap"></i></div>
           <div class="timeline-content">
-            <span class="timeline-date">Feb 2026</span>
-            <h3>Viksit Bharat Young Leaders Dialogue (VBYLD)</h3>
-            <p class="timeline-role">Ministry of Youth Affairs & Sports (MYBharat)</p>
-            <p>Participated in the national dialogue event focusing on youth leadership, technical development, and policy innovation.</p>
+            <div class="timeline-card-header">
+              <h3>B.Tech, Electronics & Communication Engineering</h3>
+              <span class="timeline-role">Andhra Loyola Institute of Engineering and Technology (ALIET)</span>
+            </div>
+            <div class="timeline-date-tag">
+              <i data-lucide="calendar"></i> 2023 - Present
+            </div>
+            <ul class="timeline-details">
+              <li><i data-lucide="chevron-right" class="detail-arrow"></i> Foundational studies in electronics principles and practical applications.</li>
+            </ul>
           </div>
         </div>
 
-        <div class="timeline-item right">
-          <div class="timeline-icon"><i data-lucide="award"></i></div>
-          <div class="timeline-content">
-            <span class="timeline-date">Feb 2025</span>
-            <h3>EPISTEMICON 2025 - Project Expo</h3>
-            <p class="timeline-role">ALIET National Symposium</p>
-            <p>Awarded 2nd Prize in the Project Expo for presenting a prototype modeling real-time sensor integration systems.</p>
-          </div>
-        </div>
 
-        <div class="timeline-item left">
+        <!-- Item 3.5: Siliquan Technologies Internship -->
+        <div class="timeline-item accent-pink">
           <div class="timeline-icon"><i data-lucide="cpu"></i></div>
           <div class="timeline-content">
-            <span class="timeline-date">Feb 2025</span>
-            <h3>Two-Day Workshop on Industrial IoT</h3>
-            <p class="timeline-role">Andhra Loyola Institute (ALIET)</p>
-            <p>Completed hands-on laboratory workshops focusing on IIoT gateways, sensor arrays, and telemetry data models.</p>
+            <div class="timeline-card-header">
+              <h3>Embedded Systems Intern</h3>
+              <span class="timeline-role">Siliquan Technologies (Short-Term Internship)</span>
+            </div>
+            <div class="timeline-date-tag">
+              <i data-lucide="calendar"></i> Dec 2024 - Jan 2025
+            </div>
+            <ul class="timeline-details">
+              <li><i data-lucide="chevron-right" class="detail-arrow"></i> Working with embedded systems concepts and hardware-software integration.</li>
+              <li><i data-lucide="chevron-right" class="detail-arrow"></i> Learning microcontrollers, interfacing techniques, and real-time applications.</li>
+              <li><i data-lucide="chevron-right" class="detail-arrow"></i> Developing practical skills in embedded system design and implementation.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="timeline-tag">EMBEDDED SYSTEMS</span>
+              <span class="timeline-tag">MICROCONTROLLERS</span>
+              <span class="timeline-tag">HARDWARE INTEGRATION</span>
+            </div>
           </div>
         </div>
 
-        <div class="timeline-item right">
+        <!-- Item 4: Academic Certifications -->
+        <div class="timeline-item accent-cyan">
           <div class="timeline-icon"><i data-lucide="check-circle-2"></i></div>
           <div class="timeline-content">
-            <span class="timeline-date">2024 - 2025</span>
-            <h3>Academic Competence Certifications</h3>
-            <p class="timeline-role">NPTEL & APSSDC Programs</p>
-            <p>Completed professional credentials covering PCB Design, Python Fundamentals, and Artificial Intelligence.</p>
+            <div class="timeline-card-header">
+              <h3>Academic Competence Certifications</h3>
+              <span class="timeline-role">NPTEL & APSSDC Programs</span>
+            </div>
+            <div class="timeline-date-tag">
+              <i data-lucide="calendar"></i> 2024 - 2025
+            </div>
+            <ul class="timeline-details">
+              <li><i data-lucide="chevron-right" class="detail-arrow"></i> Completed professional competency courses covering <span class="tech-highlight">PCB Design</span>, <span class="tech-highlight">Python Fundamentals</span>, and <span class="tech-highlight">Artificial Intelligence</span>.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="timeline-tag">PCB DESIGN</span>
+              <span class="timeline-tag">PYTHON</span>
+              <span class="timeline-tag">AI/ML</span>
+            </div>
           </div>
         </div>
       </div>
@@ -627,7 +982,7 @@
         <button class="suggest-btn" data-query="skills">Technical Skills</button>
         <button class="suggest-btn" data-query="projects">Main ECE Projects</button>
         <button class="suggest-btn" data-query="contact">How to hire</button>
-        <button class="suggest-btn" data-query="cgpa">CGPA & College</button>
+        <button class="suggest-btn" data-query="timeline">Timeline & Activities</button>
       </div>
       
       <form class="chatbot-input-area" id="chatbot-form">
@@ -651,11 +1006,10 @@
   <script src="https://unpkg.com/lucide@latest"></script>
   
   <!-- Modular JS Application Scripts -->
-  <script src="js/app.js?v=1.1"></script>
-  <script src="js/dashboard.js?v=1.1"></script>
-  <script src="js/gallery.js?v=1.1"></script>
-  <script src="js/resume.js?v=1.1"></script>
-  <script src="js/contact.js?v=1.1"></script>
-  <script src="js/chatbot.js?v=1.1"></script>
+  <script src="js/app.js?v=3.1"></script>
+  <script src="js/gallery.js?v=3.1"></script>
+  <script src="js/resume.js?v=3.1"></script>
+  <script src="js/contact.js?v=3.1"></script>
+  <script src="js/chatbot.js?v=3.1"></script>
 </body>
 </html>
