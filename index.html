@@ -440,44 +440,26 @@
         <!-- Project 2 -->
         <div class="glow-card-container">
           <div class="glass-card project-card">
-            <div class="project-thumbnail project-carousel" id="patient-carousel">
-              <div class="carousel-track">
-                <img src="images/patient_poster.png" alt="Team and Poster Presentation" class="carousel-slide active">
-                <img src="images/patient_hardware.png" class="carousel-slide" alt="Real-time ECG & Temp Telemetry Circuit">
-                <img src="images/patient_group.png" class="carousel-slide" alt="Team working on the Arduino system">
-              </div>
-              <button class="carousel-btn prev-btn" aria-label="Previous Slide">&lt;</button>
-              <button class="carousel-btn next-btn" aria-label="Next Slide">&gt;</button>
-              <div class="carousel-dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-              </div>
+            <div class="project-thumbnail">
+              <img src="images/patient.png" alt="Patient Health Monitoring System">
             </div>
             <div class="project-body">
               <div class="project-icon"><i data-lucide="activity"></i></div>
-              <h3 class="project-title">Patient Health Monitoring System Using Arduino</h3>
+              <h3 class="project-title">Patient Health Monitoring System</h3>
               <p class="project-desc">
-                Developed for <strong>Invothon 2k25</strong>, this Arduino-based real-time patient monitoring system tracks vital health parameters (ECG, temperature) and displays data locally on an LCD or streams it wirelessly to remote systems.
+                Built an Arduino-based real-time patient monitoring system using temperature and ECG sensors. Enabled continuous vital monitoring with remote healthcare data visualization.
               </p>
               <div class="project-tech">
                 <span>Arduino</span>
                 <span>C/C++</span>
                 <span>ECG Sensor</span>
                 <span>Temp Sensor</span>
-                <span>Firebase</span>
                 <span>Data Viz</span>
               </div>
               <div class="project-links">
                 <a href="https://github.com/bhavyamandagiri/patient-health-monitor" target="_blank" class="project-link">
                   <i data-lucide="github"></i> Repository
                 </a>
-                <button class="project-link view-details-btn" data-project="patient-monitor">
-                  <i data-lucide="info"></i> System Details
-                </button>
-                <button class="project-link view-code-btn" data-project="patient-monitor">
-                  <i data-lucide="code-2"></i> View Code
-                </button>
               </div>
             </div>
           </div>
@@ -564,163 +546,6 @@
         <img class="lightbox-img" id="lightbox-img" src="" alt="Zoomed Certificate">
       </div>
       <h3 class="lightbox-title" id="lightbox-title"></h3>
-    </div>
-  </div>
-
-  <!-- Code Viewer Modal -->
-  <div class="code-modal" id="code-modal">
-    <div class="code-modal-content">
-      <div class="code-modal-header">
-        <div class="code-modal-title">
-          <i data-lucide="code-2"></i>
-          <span>Arduino Sketch: Patient Health Monitoring System</span>
-        </div>
-        <div class="code-modal-actions">
-          <button class="code-copy-btn" id="code-copy-btn">
-            <i data-lucide="copy"></i> Copy Code
-          </button>
-          <button class="code-modal-close" id="code-modal-close">&times;</button>
-        </div>
-      </div>
-      <div class="code-modal-body">
-        <pre><code class="arduino-code" id="arduino-code-block"><span class="code-directive">#include</span> <span class="code-header">&lt;Wire.h&gt;</span>
-<span class="code-directive">#include</span> <span class="code-header">&lt;LiquidCrystal_I2C.h&gt;</span>
-
-<span class="code-comment">// Define LCD with I2C address (commonly 0x27) and dimensions (20 columns x 4 rows)</span>
-<span class="code-type">LiquidCrystal_I2C</span> <span class="code-class">lcd</span>(<span class="code-number">0x27</span>, <span class="code-number">20</span>, <span class="code-number">4</span>);
-
-<span class="code-comment">// Sensor pin definitions</span>
-<span class="code-modifier">const</span> <span class="code-type">int</span> <span class="code-var">ecgPin</span> = <span class="code-keyword">A0</span>;  <span class="code-comment">// ECG sensor analog input</span>
-<span class="code-modifier">const</span> <span class="code-type">int</span> <span class="code-var">lm35Pin</span> = <span class="code-keyword">A1</span>; <span class="code-comment">// LM35 temperature sensor analog input</span>
-
-<span class="code-type">void</span> <span class="code-function">setup</span>() 
-{
-  <span class="code-keyword">Serial</span>.<span class="code-function">begin</span>(<span class="code-number">9600</span>);
-  
-  <span class="code-comment">// Initialize the I2C LCD</span>
-  <span class="code-var">lcd</span>.<span class="code-function">init</span>();
-  <span class="code-var">lcd</span>.<span class="code-function">backlight</span>();
-  <span class="code-var">lcd</span>.<span class="code-function">clear</span>();
-}
-
-<span class="code-type">void</span> <span class="code-function">loop</span>() 
-{
-  <span class="code-comment">// Read ECG sensor value from analog pin</span>
-  <span class="code-type">int</span> <span class="code-var">ecgValue</span> = <span class="code-function">analogRead</span>(<span class="code-var">ecgPin</span>);
-  
-  <span class="code-comment">// Read LM35 sensor value and convert to temperature in Celsius.</span>
-  <span class="code-comment">// LM35 outputs 10 mV/°C and analogRead gives a value from 0 to 1023 for 0-5V.</span>
-  <span class="code-type">int</span> <span class="code-var">lm35Value</span> = <span class="code-function">analogRead</span>(<span class="code-var">lm35Pin</span>);
-  <span class="code-type">float</span> <span class="code-var">temperatureC</span> = <span class="code-var">lm35Value</span> * (<span class="code-number">5.0</span> / <span class="code-number">1023.0</span>) * <span class="code-number">100.0</span>;
-
-  <span class="code-comment">// Update LCD display with ECG and temperature values</span>
-  <span class="code-var">lcd</span>.<span class="code-function">clear</span>();
-  <span class="code-var">lcd</span>.<span class="code-function">setCursor</span>(<span class="code-number">0</span>, <span class="code-number">0</span>);
-  <span class="code-var">lcd</span>.<span class="code-function">print</span>(<span class="code-string">"ECG: "</span>);
-  <span class="code-var">lcd</span>.<span class="code-function">print</span>(<span class="code-var">ecgValue</span>);
-  
-  <span class="code-var">lcd</span>.<span class="code-function">setCursor</span>(<span class="code-number">0</span>, <span class="code-number">1</span>);
-  <span class="code-var">lcd</span>.<span class="code-function">print</span>(<span class="code-string">"Temp: "</span>);
-  <span class="code-var">lcd</span>.<span class="code-function">print</span>(<span class="code-var">temperatureC</span>, <span class="code-number">1</span>);
-  <span class="code-var">lcd</span>.<span class="code-function">print</span>(<span class="code-string">" C"</span>);
-
-  <span class="code-comment">// Output the ECG value to Serial for plotting.</span>
-  <span class="code-comment">// The Serial Plotter works best when a line contains only a numeric value.</span>
-  <span class="code-keyword">Serial</span>.<span class="code-function">println</span>(<span class="code-var">ecgValue</span>);
-  
-  <span class="code-function">delay</span>(<span class="code-number">10</span>); <span class="code-comment">// Small delay for smooth updating</span>
-}</code></pre>
-      </div>
-    </div>
-  </div>
-
-  <!-- Project Details Modal -->
-  <div class="project-details-modal" id="details-modal">
-    <div class="details-modal-content">
-      <div class="details-modal-header">
-        <div class="details-modal-title">
-          <i data-lucide="activity"></i>
-          <span>Patient Health Monitoring System</span>
-        </div>
-        <button class="details-modal-close" id="details-modal-close">&times;</button>
-      </div>
-      <div class="details-modal-body">
-        <div class="details-grid">
-          <!-- Left: Media Gallery -->
-          <div class="details-gallery">
-            <div class="main-preview-container" id="details-preview-container" title="Click to zoom image">
-              <img id="details-main-img" src="images/patient_poster.png" alt="Team and Poster Presentation" class="details-preview-img">
-            </div>
-            <div class="gallery-thumbs">
-              <img src="images/patient_poster.png" class="thumb-img active" data-alt="Team and Poster Presentation" onclick="switchPreview(this)">
-              <img src="images/patient_hardware.png" class="thumb-img" data-alt="Real-time ECG & Temp Telemetry Circuit" onclick="switchPreview(this)">
-              <img src="images/patient_waveform.png" class="thumb-img" data-alt="ECG Signal Waveform Reference" onclick="switchPreview(this)">
-            </div>
-            <p class="gallery-caption" id="gallery-caption">Team and Poster Presentation</p>
-          </div>
-          
-          <!-- Right: Information -->
-          <div class="details-info">
-            <div class="info-section">
-              <h4><i data-lucide="target" class="info-icon"></i> Project Aim</h4>
-              <p>
-                To design and develop an Arduino-based patient health monitoring system that continuously tracks and monitors vital parameters (heart rate, body temperature, blood pressure) in real time, enabling early detection of medical anomalies and sending telemetry logs for emergency alerts.
-              </p>
-            </div>
-            
-            <div class="info-section">
-              <h4><i data-lucide="check-circle" class="info-icon"></i> Key Objectives</h4>
-              <ul class="objectives-list">
-                <li>
-                  <span class="objective-num">1</span>
-                  <div>
-                    <strong>Real-Time Monitoring:</strong> Continuously track vital health parameters of a patient using integrated sensors.
-                  </div>
-                </li>
-                <li>
-                  <span class="objective-num">2</span>
-                  <div>
-                    <strong>Wireless Data Transmission:</strong> Leverage Wi-Fi, Bluetooth, or GSM modules to stream telemetry logs to a cloud database like <strong>Firebase</strong> or a mobile application.
-                  </div>
-                </li>
-                <li>
-                  <span class="objective-num">3</span>
-                  <div>
-                    <strong>Intelligent Alert System:</strong> Automatically generate emergency alerts in case of abnormal patient readings for timely medical intervention.
-                  </div>
-                </li>
-              </ul>
-            </div>
-            
-            <div class="details-meta-grid">
-              <div class="meta-item">
-                <span class="meta-label">Architecture</span>
-                <span class="meta-value">Arduino / Telemetry</span>
-              </div>
-              <div class="meta-item">
-                <span class="meta-label">Sensors Interfaced</span>
-                <span class="meta-value">ECG (Analog) & LM35 (Temp)</span>
-              </div>
-              <div class="meta-item">
-                <span class="meta-label">Database</span>
-                <span class="meta-value">Firebase / Firestore</span>
-              </div>
-              <div class="meta-item">
-                <span class="meta-label">Presented At</span>
-                <span class="meta-value">Invothon 2k25</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="details-modal-footer">
-        <a href="https://github.com/bhavyamandagiri/patient-health-monitor" target="_blank" class="details-action-btn">
-          <i data-lucide="github"></i> Repository
-        </a>
-        <button class="details-action-btn" id="details-view-code-btn">
-          <i data-lucide="code-2"></i> View Code
-        </button>
-      </div>
     </div>
   </div>
 
@@ -1011,10 +836,10 @@
   <script src="https://unpkg.com/lucide@latest"></script>
   
   <!-- Modular JS Application Scripts -->
-  <script src="js/app.js?v=3.1"></script>
-  <script src="js/gallery.js?v=3.1"></script>
-  <script src="js/resume.js?v=3.1"></script>
-  <script src="js/contact.js?v=3.1"></script>
-  <script src="js/chatbot.js?v=3.1"></script>
+  <script src="js/app.js?v=2.8"></script>
+  <script src="js/gallery.js?v=2.8"></script>
+  <script src="js/resume.js?v=2.8"></script>
+  <script src="js/contact.js?v=2.8"></script>
+  <script src="js/chatbot.js?v=2.8"></script>
 </body>
 </html>
