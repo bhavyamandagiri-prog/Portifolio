@@ -12,102 +12,206 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Resume versions dataset
   let resumeVersions = [
-    { version: 'v2.1', date: 'Jun 2026', label: 'Latest Draft', filename: 'Bhavya_Mandagiri_Resume_v2.1.pdf', active: true },
-    { version: 'v2.0', date: 'Jan 2026', label: 'Placement Ready', filename: 'Bhavya_Mandagiri_Resume_v2.0.pdf', active: false },
-    { version: 'v1.2', date: 'Aug 2025', label: 'Internship Core', filename: 'Bhavya_Mandagiri_Resume_v1.2.pdf', active: false }
+    { version: 'v3.0', date: 'Jul 2026', label: 'Latest CV', filename: 'Bhavya_Mandagiri_CV_v3.0.pdf', active: true },
+    { version: 'v2.1', date: 'Jun 2026', label: 'Previous Draft', filename: 'Bhavya_Mandagiri_Resume_v2.1.pdf', active: false },
+    { version: 'v2.0', date: 'Jan 2026', label: 'Placement Ready', filename: 'Bhavya_Mandagiri_Resume_v2.0.pdf', active: false }
   ];
 
   // Resume Details Map (Verified Contents Only)
   const resumeDetails = {
-    name: 'Bhavya Mandagiri',
+    name: 'MANDAGIRI BHAVYA',
     tagline: 'B.Tech ECE Student | VLSI & Full Stack Developer | AI Enthusiast',
-    email: 'bhavya.mandagiri.ece@gmail.com',
-    phone: '+91 XXXXX XXXXX',
+    email: 'bhavyamandagiri@gmail.com',
+    phone: '9493332533',
     location: 'Andhra Pradesh, India',
     github: 'github.com/bhavyamandagiri',
     linkedin: 'linkedin.com/in/bhavya-mandagiri-106ba02b5',
+    portfolio: 'https://portifolio-virid-theta.vercel.app/',
+    summary: 'Electronics and Communication Engineering student with hands-on experience in VLSI Design for Testability (DFT), Full-Stack Development, and AI-based application development. Proficient in developing intelligent applications, web solutions, and technology-driven projects, with a passion for innovation, problem-solving, and continuous learning.',
     education: [
-      { degree: 'B.Tech in Electronics & Communication Engineering', inst: 'Andhra Loyola Institute of Engineering and Technology (ALIET)', duration: '2023 - 2027', cgpa: '8.06 / 10.0' }
+      { degree: 'Bachelor of Technology', inst: 'Andhra Loyola Institute of Engineering and Technology, Vijayawada', duration: 'Sep 2023 – Present', score: '8.0 CGPA (2023-2027)' },
+      { degree: 'Intermediate - MPC', inst: 'Sri Chaitanya Junior College, Chuttugunta', duration: 'Sep 2021 – Feb 2023', score: '7.84 CGPA' },
+      { degree: 'Secondary Education - SSC', inst: "St. Joseph's High School, Nunna", duration: '2021', score: '93.5 CGPA' }
     ],
-    skills: {
-      languages: 'Verilog HDL, Python, JavaScript, SQL, HTML5, CSS3, C/C++',
-      frameworks: 'React.js, Node.js, Express, TensorFlow, Flask, OpenCV',
-      protocols: 'VLSI DFT, UART, SPI, I2C',
-      tools: 'Xilinx Vivado, LTSpice, Git, VS Code, MongoDB'
-    },
-    experience: [
-      { role: 'VLSI DFT (Design for Testability) Intern', company: 'BIST Technologies Pvt. Ltd. (Offline Industrial Internship)', duration: 'May 2025 - July 2025', bullets: [
-        'Completed a 2-month industrial internship focused on Design for Testability (DFT) in VLSI.',
-        'Gained practical exposure to industry workflows and testing methodologies.',
-        'Understood real-time semiconductor testing concepts and verification processes.'
+    skills: [
+      { category: 'Programming', items: 'Python, C' },
+      { category: 'AI & Machine Learning', items: 'Machine Learning, CNN, OpenCV' },
+      { category: 'Electronics & Hardware', items: 'Arduino, ESP32, ESP8266, Sensors & Actuators' },
+      { category: 'Tools & Software', items: 'MATLAB, LabVIEW, GitHub, VS Code' },
+      { category: 'Domains', items: 'VLSI, IoT, Embedded Systems, Full Stack Development' },
+      { category: 'Embedded Systems', items: 'Microcontroller, Microcontroller Programming, Sensor Interfacing, Hardware Prototyping, IoT System Design, Cloud Integration, Real-Time Monitoring' },
+      { category: 'Web Development', items: 'HTML, CSS, JavaScript, React.js, Next.js' },
+      { category: 'Database & Backend', items: 'Firebase, Firestore' },
+      { category: 'Mobile App Development', items: 'React Native, Expo' }
+    ],
+    projects: [
+      { title: 'GREEN TECHNOLOGY BASED- AI VIRTUAL HEALTHCARE SUPPORTS & MONITORING ROBOT', duration: 'Mar- Present', bullets: [
+        'Developed an AI-powered healthcare assistant with medicine reminders and patient monitoring.',
+        'Implemented CNN-based medicine recognition using Python and OpenCV.',
+        'Integrated health analytics dashboard and family notification system.'
       ]},
-      { role: 'Embedded Systems Intern', company: 'Siliquan Technologies (Short-Term Internship)', duration: 'Dec 2024 - Jan 2025', bullets: [
-        'Working with embedded systems concepts and hardware-software integration.',
-        'Learning microcontrollers, interfacing techniques, and real-time applications.',
-        'Developing practical skills in embedded system design and implementation.'
+      { title: 'Smart Curriculum Activity & Attendance App (EduVino)', duration: 'Aug 2025 - Present', bullets: [
+        'Technologies: Python, OpenCV, CNN, Flask, HTML, CSS, JavaScript, SQLite/MySQL, Pandas, Matplotlib, Anaconda',
+        'Developed an AI-powered smart education platform to automate attendance using face recognition.',
+        'Implemented emotion detection to analyze students\' classroom engagement and generate reports.',
+        'Built separate login portals for Admin, Faculty, Student, and Counselor.',
+        'Enabled teachers to upload study materials, assignments, and academic resources.',
+        'Developed student performance dashboards with marks analysis and graphical reports.',
+        'Integrated attendance reports, academic progress tracking, and personalized career guidance. Generated alerts for students with low attendance or negative emotional patterns to assist counselors.'
+      ]},
+      { title: 'Patient Health Monitoring System', duration: 'Jan 2025 - Apr 2025', bullets: [
+        'Technologies: Arduino Uno | Embedded C | Biomedical Sensors | LCD',
+        'Developed an embedded health monitoring system using Arduino Uno and biomedical sensors.',
+        'Interfaced sensors with the microcontroller to acquire and process real-time patient data.',
+        'Programmed the system in Embedded C for data processing and LCD display.',
+        'Implemented ADC-based sensor interfacing and real-time monitoring.',
+        'Gained hands-on experience in Embedded Systems, Sensor Interfacing, and Serial Communication.'
+      ]},
+      { title: 'Signnovate – Indian Sign Language Translation System (SIH 2024)', duration: 'Dec 2024 - Apr 2025', bullets: [
+        'Developed a prototype for Smart India Hackathon 2024 to convert Indian Sign Language (ISL) gestures into text using CNN-based deep learning.',
+        'Proposed multilingual translation, error detection, and text-to-sign conversion to improve accessibility for the hearing and speech impaired.',
+        'Technologies: Python, OpenCV, CNN, TensorFlow/Keras, Anaconda.'
       ]}
+    ],
+    internships: [
+      { company: 'BIST Technologies Pvt. Ltd. – Offline Short-Term Industrial Internship', duration: 'May–July 2025', role: 'Domain: VLSI DFT', bullets: [
+        'Completed a 2-month industrial internship focused on Design for Testability (DFT) in VLSI.',
+        'Gained practical exposure to industry workflows and testing methodologies.'
+      ]},
+      { company: 'Summer Industrial Internship – Embedded Systems (TechLogic IT Solutions Pvt. Ltd.)', duration: '18 May 2026 – 12 June 2026', role: 'Intern', bullets: [
+        'Completed a 1-month Summer Industrial Internship in Embedded Systems, gaining practical knowledge of embedded system design and development.',
+        'Enhanced my skills in microcontrollers, Embedded C, IoT basics, sensor interfacing, and problem-solving through hands-on learning.'
+      ]}
+    ],
+    certifications: [
+      'Artificial Intelligence – NPTEL',
+      'Internet of Things – NPTEL',
+      'Python Fundamentals – Infosys Springboard',
+      'PCB Design – APSSDC',
+      'Drone Developer Programme – Reliance Foundation'
+    ],
+    leadership: [
+      'Euphonious Voice Club',
+      'Cultural Coordinator',
+      'YESJ Volunteer (Youth Empowerment Service Journey)',
+      'MAGIC Youth Volunteer',
+      'Program Development & Event Planning'
+    ],
+    achievements: [
+      'Epistimicon 2K25 Project Expo – Second Prize Winner: Developed "Smart Curriculum Activity and Attendance App", an innovative application designed to digitally track student activities and attendance, improving academic monitoring and management.'
     ]
   };
 
   // Render mock resume preview in HTML
   function renderResumePreview(selectedFilename = resumeVersions[0].filename) {
-    const cgpaVal = document.getElementById('cgpa-input')?.value || '8.06';
-    
     previewBody.innerHTML = `
       <div class="resume-mock">
         <div class="resume-mock-header">
-          <h1 class="resume-mock-name">${resumeDetails.name}</h1>
-          <p class="resume-mock-contact">
-            ${resumeDetails.location} | ${resumeDetails.email} | ${resumeDetails.linkedin} | ${resumeDetails.github}
+          <h1 class="resume-mock-name" style="text-transform: uppercase; font-size: 1.8rem; font-weight: 800; text-align: center; margin-bottom: 8px; letter-spacing: 1px;">${resumeDetails.name}</h1>
+          <p class="resume-mock-contact" style="text-align: center; font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 12px;">
+            Email: ${resumeDetails.email} | Mobile: ${resumeDetails.phone} | <a href="https://${resumeDetails.linkedin}" target="_blank" style="color: var(--accent-cyan);">LinkedIn</a> | Portfolio: <a href="${resumeDetails.portfolio}" target="_blank" style="color: var(--accent-cyan);">${resumeDetails.portfolio.replace('https://', '')}</a>
           </p>
-          <p style="font-size:0.75rem; color:var(--accent-cyan); font-weight:600; margin-top:5px; font-family:monospace;">
+          <p style="font-size:0.7rem; color:var(--accent-pink); font-weight:600; margin-top:5px; font-family:monospace; text-align: center; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 10px;">
             Selected File: ${selectedFilename}
           </p>
         </div>
 
-        <div class="resume-mock-section">
-          <h2 class="resume-mock-section-title">Professional Summary</h2>
-          <p style="font-size: 0.85rem; line-height:1.4;">
-            Highly motivated B.Tech Electronics & Communication Engineering student with practical design insights spanning both microcircuit level architectures and scalable web frameworks. Adept at interfacing hardware telemetry layers with premium responsive applications.
+        <div class="resume-mock-section" style="margin-top: 15px;">
+          <h2 class="resume-mock-section-title" style="font-size: 0.95rem; font-weight: 700; text-transform: uppercase; border-bottom: 1px solid rgba(255, 255, 255, 0.2); padding-bottom: 4px; margin-bottom: 8px; color: var(--accent-cyan);">Professional Summary</h2>
+          <p style="font-size: 0.8rem; line-height:1.4; color: var(--text-primary);">
+            ${resumeDetails.summary}
           </p>
         </div>
 
-        <div class="resume-mock-section">
-          <h2 class="resume-mock-section-title">Education</h2>
+        <div class="resume-mock-section" style="margin-top: 15px;">
+          <h2 class="resume-mock-section-title" style="font-size: 0.95rem; font-weight: 700; text-transform: uppercase; border-bottom: 1px solid rgba(255, 255, 255, 0.2); padding-bottom: 4px; margin-bottom: 8px; color: var(--accent-cyan);">Education</h2>
           ${resumeDetails.education.map(edu => `
-            <div class="resume-mock-item">
-              <div class="resume-mock-item-header">
-                <span>${edu.degree}</span>
-                <span>${edu.duration}</span>
+            <div class="resume-mock-item" style="margin-bottom: 10px;">
+              <div class="resume-mock-item-header" style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 600;">
+                <span style="color: var(--text-primary);">${edu.degree}</span>
+                <span style="color: var(--text-muted); font-size: 0.8rem;">${edu.duration}</span>
               </div>
-              <div class="resume-mock-item-sub">${edu.inst}</div>
-              <div style="font-size:0.8rem; font-weight:600; color: var(--accent-cyan); margin-top:2px;">Cumulative Score: ${cgpaVal} / 10.00 CGPA</div>
+              <div class="resume-mock-item-sub" style="font-size: 0.8rem; color: var(--text-secondary);">${edu.inst}</div>
+              <div style="font-size:0.75rem; font-weight:600; color: var(--accent-pink); margin-top:2px;">${edu.score}</div>
             </div>
           `).join('')}
         </div>
 
-        <div class="resume-mock-section">
-          <h2 class="resume-mock-section-title">Technical Competence</h2>
-          <p style="font-size:0.8rem; margin-bottom:5px;"><strong>Languages:</strong> ${resumeDetails.skills.languages}</p>
-          <p style="font-size:0.8rem; margin-bottom:5px;"><strong>Frameworks & Libs:</strong> ${resumeDetails.skills.frameworks}</p>
-          <p style="font-size:0.8rem; margin-bottom:5px;"><strong>Hardware Interfaces:</strong> ${resumeDetails.skills.protocols}</p>
-          <p style="font-size:0.8rem;"><strong>EDA & Tools:</strong> ${resumeDetails.skills.tools}</p>
+        <div class="resume-mock-section" style="margin-top: 15px;">
+          <h2 class="resume-mock-section-title" style="font-size: 0.95rem; font-weight: 700; text-transform: uppercase; border-bottom: 1px solid rgba(255, 255, 255, 0.2); padding-bottom: 4px; margin-bottom: 8px; color: var(--accent-cyan);">Skills</h2>
+          <ul style="padding-left:15px; margin:0; font-size: 0.8rem; line-height: 1.4; color: var(--text-primary);">
+            ${resumeDetails.skills.map(s => `
+              <li style="margin-bottom: 4px;"><strong>${s.category}:</strong> ${s.items}</li>
+            `).join('')}
+          </ul>
         </div>
 
-        <div class="resume-mock-section">
-          <h2 class="resume-mock-section-title">Experience & Internships</h2>
-          ${resumeDetails.experience.map(exp => `
-            <div class="resume-mock-item">
-              <div class="resume-mock-item-header">
-                <span>${exp.role}</span>
-                <span>${exp.duration}</span>
+        <div class="resume-mock-section" style="margin-top: 15px;">
+          <h2 class="resume-mock-section-title" style="font-size: 0.95rem; font-weight: 700; text-transform: uppercase; border-bottom: 1px solid rgba(255, 255, 255, 0.2); padding-bottom: 4px; margin-bottom: 8px; color: var(--accent-cyan);">Projects</h2>
+          ${resumeDetails.projects.map(proj => `
+            <div class="resume-mock-item" style="margin-bottom: 12px;">
+              <div class="resume-mock-item-header" style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 600;">
+                <span style="color: var(--text-primary); text-transform: uppercase;">${proj.title}</span>
+                <span style="color: var(--text-muted); font-size: 0.8rem;">${proj.duration}</span>
               </div>
-              <div class="resume-mock-item-sub">${exp.company}</div>
-              <ul style="padding-left:15px; margin-top:5px;">
-                ${exp.bullets.map(b => `<li class="resume-mock-bullet">${b}</li>`).join('')}
+              <ul style="padding-left:15px; margin-top:4px; font-size: 0.78rem; line-height: 1.4; color: var(--text-secondary);">
+                ${proj.bullets.map(b => `<li class="resume-mock-bullet" style="margin-bottom: 3px;">${b}</li>`).join('')}
               </ul>
             </div>
           `).join('')}
+        </div>
+
+        <div class="resume-mock-section" style="margin-top: 15px;">
+          <h2 class="resume-mock-section-title" style="font-size: 0.95rem; font-weight: 700; text-transform: uppercase; border-bottom: 1px solid rgba(255, 255, 255, 0.2); padding-bottom: 4px; margin-bottom: 8px; color: var(--accent-cyan);">Internships</h2>
+          ${resumeDetails.internships.map(intern => `
+            <div class="resume-mock-item" style="margin-bottom: 10px;">
+              <div class="resume-mock-item-header" style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 600;">
+                <span style="color: var(--text-primary);">${intern.company}</span>
+                <span style="color: var(--text-muted); font-size: 0.8rem;">${intern.duration}</span>
+              </div>
+              <div class="resume-mock-item-sub" style="font-size: 0.8rem; color: var(--accent-pink); font-weight: 500;">${intern.role}</div>
+              <ul style="padding-left:15px; margin-top:4px; font-size: 0.78rem; line-height: 1.4; color: var(--text-secondary);">
+                ${intern.bullets.map(b => `<li class="resume-mock-bullet" style="margin-bottom: 3px;">${b}</li>`).join('')}
+              </ul>
+            </div>
+          `).join('')}
+        </div>
+
+        <div class="resume-mock-section" style="margin-top: 15px;">
+          <h2 class="resume-mock-section-title" style="font-size: 0.95rem; font-weight: 700; text-transform: uppercase; border-bottom: 1px solid rgba(255, 255, 255, 0.2); padding-bottom: 4px; margin-bottom: 8px; color: var(--accent-cyan);">Certifications</h2>
+          <ul style="padding-left:15px; margin:0; font-size: 0.8rem; line-height: 1.4; color: var(--text-primary);">
+            ${resumeDetails.certifications.map(cert => `
+              <li style="margin-bottom: 3px;">${cert}</li>
+            `).join('')}
+          </ul>
+        </div>
+
+        <div class="resume-mock-section" style="margin-top: 15px;">
+          <h2 class="resume-mock-section-title" style="font-size: 0.95rem; font-weight: 700; text-transform: uppercase; border-bottom: 1px solid rgba(255, 255, 255, 0.2); padding-bottom: 4px; margin-bottom: 8px; color: var(--accent-cyan);">Leadership & Volunteering</h2>
+          <ul style="padding-left:15px; margin:0; font-size: 0.8rem; line-height: 1.4; color: var(--text-primary);">
+            ${resumeDetails.leadership.map(lead => `
+              <li style="margin-bottom: 3px;">${lead}</li>
+            `).join('')}
+          </ul>
+        </div>
+
+        <div class="resume-mock-section" style="margin-top: 15px;">
+          <h2 class="resume-mock-section-title" style="font-size: 0.95rem; font-weight: 700; text-transform: uppercase; border-bottom: 1px solid rgba(255, 255, 255, 0.2); padding-bottom: 4px; margin-bottom: 8px; color: var(--accent-cyan);">Achievements</h2>
+          <ul style="padding-left:15px; margin:0; font-size: 0.8rem; line-height: 1.4; color: var(--text-primary);">
+            ${resumeDetails.achievements.map(ach => `
+              <li style="margin-bottom: 3px;">${ach}</li>
+            `).join('')}
+          </ul>
+        </div>
+
+        <div class="resume-mock-section" style="margin-top: 15px; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 10px;">
+          <h2 class="resume-mock-section-title" style="font-size: 0.95rem; font-weight: 700; text-transform: uppercase; padding-bottom: 4px; margin-bottom: 8px; color: var(--accent-cyan);">Declaration</h2>
+          <p style="font-size: 0.78rem; line-height:1.4; font-style: italic; color: var(--text-secondary);">
+            I hereby declare that the above information is true and correct to the best of my knowledge and belief.
+          </p>
+          <p style="font-size: 0.8rem; font-weight: 600; text-align: right; margin-top: 5px; color: var(--text-primary);">
+            (Mandagiri.Bhavya)
+          </p>
         </div>
       </div>
     `;
@@ -191,7 +295,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Insert new version into database list
     const newVersion = {
-      version: `v2.2-Draft`,
+      version: `v3.1-Draft`,
       date: 'Today',
       label: `Uploaded: ${file.name}`,
       filename: file.name,
@@ -216,65 +320,122 @@ document.addEventListener('DOMContentLoaded', () => {
   // Print Mechanics (Opens neat print-ready layout)
   printBtn.addEventListener('click', () => {
     const printWindow = window.open('', '_blank');
-    const cgpaVal = document.getElementById('cgpa-input')?.value || '8.06';
     printWindow.document.write(`
       <html>
         <head>
-          <title>Bhavya Mandagiri - Resume</title>
+          <title>${resumeDetails.name} - Resume</title>
           <style>
-            body { font-family: Arial, sans-serif; line-height: 1.5; padding: 40px; color: #333; }
-            h1 { font-size: 28px; text-align: center; margin-bottom: 5px; }
-            .contact { text-align: center; font-size: 14px; margin-bottom: 30px; border-bottom: 2px solid #555; padding-bottom: 10px; }
-            .section { margin-bottom: 25px; }
-            .section-title { font-size: 18px; border-bottom: 1px solid #ccc; font-weight: bold; text-transform: uppercase; margin-bottom: 10px; padding-bottom: 3px; }
-            .item { margin-bottom: 12px; }
-            .item-header { display: flex; justify-content: space-between; font-weight: bold; }
-            .item-sub { font-style: italic; color: #555; }
-            ul { margin-top: 5px; padding-left: 20px; }
-            li { font-size: 14px; }
-            p { font-size: 14px; }
+            body { font-family: Arial, sans-serif; line-height: 1.4; padding: 30px; color: #111; max-width: 800px; margin: 0 auto; }
+            h1 { font-size: 26px; text-align: center; margin-bottom: 5px; text-transform: uppercase; }
+            .contact { text-align: center; font-size: 13px; margin-bottom: 20px; border-bottom: 2px solid #333; padding-bottom: 10px; }
+            .section { margin-bottom: 20px; }
+            .section-title { font-size: 16px; border-bottom: 1px solid #333; font-weight: bold; text-transform: uppercase; margin-bottom: 8px; padding-bottom: 2px; }
+            .item { margin-bottom: 10px; }
+            .item-header { display: flex; justify-content: space-between; font-weight: bold; font-size: 14px; }
+            .item-sub { font-style: italic; color: #444; font-size: 13px; }
+            .item-score { font-weight: bold; font-size: 12px; margin-top: 2px; color: #555; }
+            ul { margin-top: 4px; padding-left: 20px; margin-bottom: 0; }
+            li { font-size: 13px; margin-bottom: 2px; }
+            p { font-size: 13px; margin: 0 0 6px 0; }
+            .declaration-sig { text-align: right; font-weight: bold; margin-top: 15px; font-size: 13px; }
           </style>
         </head>
         <body>
           <h1>${resumeDetails.name}</h1>
           <div class="contact">
-            ${resumeDetails.location} | ${resumeDetails.email} | ${resumeDetails.linkedin} | ${resumeDetails.github}
+            Email: ${resumeDetails.email} | Mobile: ${resumeDetails.phone} | LinkedIn: ${resumeDetails.linkedin} | Portfolio: ${resumeDetails.portfolio}
           </div>
           
           <div class="section">
+            <div class="section-title">Professional Summary</div>
+            <p>${resumeDetails.summary}</p>
+          </div>
+
+          <div class="section">
             <div class="section-title">Education</div>
-            <div class="item">
-              <div class="item-header">
-                <span>B.Tech in Electronics & Communication Engineering</span>
-                <span>2023 - 2027</span>
+            ${resumeDetails.education.map(edu => `
+              <div class="item">
+                <div class="item-header">
+                  <span>${edu.degree}</span>
+                  <span>${edu.duration}</span>
+                </div>
+                <div class="item-sub">${edu.inst}</div>
+                <div class="item-score">${edu.score}</div>
               </div>
-              <div class="item-sub">Andhra Loyola Institute of Engineering and Technology (ALIET)</div>
-              <div style="font-weight:bold; margin-top:2px;">Cumulative Score: ${cgpaVal} / 10.00 CGPA</div>
-            </div>
+            `).join('')}
           </div>
           
           <div class="section">
             <div class="section-title">Skills</div>
-            <p><strong>Languages:</strong> ${resumeDetails.skills.languages}</p>
-            <p><strong>Frameworks:</strong> ${resumeDetails.skills.frameworks}</p>
-            <p><strong>Protocols:</strong> ${resumeDetails.skills.protocols}</p>
-            <p><strong>Tools:</strong> ${resumeDetails.skills.tools}</p>
+            <ul>
+              ${resumeDetails.skills.map(s => `
+                <li><strong>${s.category}:</strong> ${s.items}</li>
+              `).join('')}
+            </ul>
           </div>
 
           <div class="section">
-            <div class="section-title">Projects & Experience</div>
-            ${resumeDetails.experience.map(exp => `
+            <div class="section-title">Projects</div>
+            ${resumeDetails.projects.map(proj => `
               <div class="item">
                 <div class="item-header">
-                  <span>${exp.role}</span>
-                  <span>${exp.duration}</span>
+                  <span>${proj.title}</span>
+                  <span>${proj.duration}</span>
                 </div>
-                <div class="item-sub">${exp.company}</div>
                 <ul>
-                  ${exp.bullets.map(b => `<li>${b}</li>`).join('')}
+                  ${proj.bullets.map(b => `<li>${b}</li>`).join('')}
                 </ul>
               </div>
             `).join('')}
+          </div>
+
+          <div class="section">
+            <div class="section-title">Internships</div>
+            ${resumeDetails.internships.map(intern => `
+              <div class="item">
+                <div class="item-header">
+                  <span>${intern.company}</span>
+                  <span>${intern.duration}</span>
+                </div>
+                <div class="item-sub" style="font-weight: bold;">${intern.role}</div>
+                <ul>
+                  ${intern.bullets.map(b => `<li>${b}</li>`).join('')}
+                </ul>
+              </div>
+            `).join('')}
+          </div>
+
+          <div class="section">
+            <div class="section-title">Certifications</div>
+            <ul>
+              ${resumeDetails.certifications.map(cert => `
+                <li>${cert}</li>
+              `).join('')}
+            </ul>
+          </div>
+
+          <div class="section">
+            <div class="section-title">Leadership & Volunteering</div>
+            <ul>
+              ${resumeDetails.leadership.map(lead => `
+                <li>${lead}</li>
+              `).join('')}
+            </ul>
+          </div>
+
+          <div class="section">
+            <div class="section-title">Achievements</div>
+            <ul>
+              ${resumeDetails.achievements.map(ach => `
+                <li>${ach}</li>
+              `).join('')}
+            </ul>
+          </div>
+
+          <div class="section" style="margin-top: 25px;">
+            <div class="section-title">Declaration</div>
+            <p style="font-style: italic;">I hereby declare that the above information is true and correct to the best of my knowledge and belief.</p>
+            <div class="declaration-sig">(Mandagiri.Bhavya)</div>
           </div>
         </body>
       </html>
@@ -286,35 +447,76 @@ document.addEventListener('DOMContentLoaded', () => {
   // Download logic (Triggers static text blob generation representing the CV)
   downloadBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    const cgpaVal = document.getElementById('cgpa-input')?.value || '8.06';
     const activeVersion = resumeVersions.find(v => v.active) || resumeVersions[0];
     const resumeText = `
-BHAVYA MANDAGIRI
+${resumeDetails.name}
 Email: ${resumeDetails.email}
+Mobile: ${resumeDetails.phone}
 LinkedIn: ${resumeDetails.linkedin}
-GitHub: ${resumeDetails.github}
+Portfolio: ${resumeDetails.portfolio}
 
-EDUCATION:
-B.Tech in Electronics & Communication Engineering
-Andhra Loyola Institute of Engineering and Technology (ALIET) | 2023 - 2027
-Cumulative GPA: ${cgpaVal} / 10.00 CGPA
+=========================================
+PROFESSIONAL SUMMARY
+=========================================
+${resumeDetails.summary}
 
-TECHNICAL SKILLS:
-- Languages: ${resumeDetails.skills.languages}
-- Frameworks: ${resumeDetails.skills.frameworks}
-- Core Protocols: ${resumeDetails.skills.protocols}
-- Tools: ${resumeDetails.skills.tools}
-
-PROJECTS & EXPERIENCE:
-${resumeDetails.experience.map(exp => `
-* ${exp.role} | ${exp.company} | ${exp.duration}
-  ${exp.bullets.map(b => `- ${b}`).join('\n  ')}
+=========================================
+EDUCATION
+=========================================
+${resumeDetails.education.map(edu => `
+* ${edu.degree} | ${edu.duration}
+  Institution: ${edu.inst}
+  Score: ${edu.score}
 `).join('\n')}
+
+=========================================
+TECHNICAL SKILLS
+=========================================
+${resumeDetails.skills.map(s => `- ${s.category}: ${s.items}`).join('\n')}
+
+=========================================
+PROJECTS
+=========================================
+${resumeDetails.projects.map(proj => `
+* ${proj.title} (${proj.duration})
+  ${proj.bullets.map(b => `  - ${b}`).join('\n  ')}
+`).join('\n')}
+
+=========================================
+INTERNSHIPS
+=========================================
+${resumeDetails.internships.map(intern => `
+* ${intern.company} (${intern.duration})
+  Role/Domain: ${intern.role}
+  ${intern.bullets.map(b => `  - ${b}`).join('\n  ')}
+`).join('\n')}
+
+=========================================
+CERTIFICATIONS
+=========================================
+${resumeDetails.certifications.map(cert => `- ${cert}`).join('\n')}
+
+=========================================
+LEADERSHIP & VOLUNTEERING
+=========================================
+${resumeDetails.leadership.map(lead => `- ${lead}`).join('\n')}
+
+=========================================
+ACHIEVEMENTS
+=========================================
+${resumeDetails.achievements.map(ach => `- ${ach}`).join('\n')}
+
+=========================================
+DECLARATION
+=========================================
+I hereby declare that the above information is true and correct to the best of my knowledge and belief.
+
+(Mandagiri.Bhavya)
 
 Generated via Portfolio Download Engine. Version: ${activeVersion.version}
 `;
 
-    const blob = new Blob([resumeText], { type: 'text/plain' });
+    const blob = new Blob([resumeText.trim()], { type: 'text/plain' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;

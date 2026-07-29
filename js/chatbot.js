@@ -88,17 +88,17 @@ document.addEventListener('DOMContentLoaded', () => {
     let reply = "";
 
     if (text.includes('skills') || text.includes('tech') || text.includes('language') || text.includes('code') || text.includes('framework')) {
-      reply = "Bhavya is skilled in:\n- **VLSI Design:** Verilog HDL, Xilinx Vivado, VLSI DFT (Design for Testability), LTSpice, protocols (UART/SPI/I2C).\n- **Full Stack Development:** JavaScript (ES6+), React.js, Node.js, Express, MongoDB, SQL, HTML5/CSS3.\n- **AI & ML:** Python, TensorFlow, Flask, OpenCV, CNN models, and Data Analysis.\n- **Database & App Dev:** Firebase, Firestore, React Native, Expo.";
-    } else if (text.includes('project') || text.includes('healthcare') || text.includes('system') || text.includes('patient') || text.includes('attendance') || text.includes('curriculum')) {
-      reply = "Key projects include:\n1. **Green Tech AI Healthcare & Monitoring System:** Python/OpenCV/CNN system providing medicine alerts and vitals tracking.\n2. **Patient Health Monitoring System:** Arduino-based ECG & temperature remote telemetry unit.\n3. **Smart Curriculum & Attendance App:** SQLite and responsive management interface.";
+      reply = "Bhavya is skilled in:\n- **VLSI Design:** Verilog HDL, Xilinx Vivado, VLSI DFT (Design for Testability), LTSpice, protocols (UART/SPI/I2C).\n- **Full Stack Development:** JavaScript (ES6+), React.js, Node.js, Express, MongoDB, SQL, HTML5/CSS3, Next.js.\n- **AI & ML:** Python, TensorFlow, Flask, OpenCV, CNN models, and Data Analysis.\n- **Database & App Dev:** Firebase, Firestore, React Native, Expo.";
+    } else if (text.includes('project') || text.includes('healthcare') || text.includes('system') || text.includes('patient') || text.includes('attendance') || text.includes('curriculum') || text.includes('sign') || text.includes('signnovate')) {
+      reply = "Key projects include:\n1. **Green Tech AI Healthcare & Monitoring System:** Python/OpenCV/CNN system providing medicine alerts and vitals tracking.\n2. **Smart Curriculum & Attendance App (EduVino):** Face recognition attendance & student analytics.\n3. **Patient Health Monitoring System:** Arduino-based remote vital telemetry unit.\n4. **Signnovate:** SIH 2024 Indian Sign Language translation prototype using deep learning.";
     } else if (text.includes('timeline') || text.includes('activities') || text.includes('milestone') || text.includes('history')) {
-      reply = "Key milestones on Bhavya's timeline include:\n- **2023 - Present:** B.Tech, Electronics & Communication Engineering at Andhra Loyola Institute of Engineering and Technology (ALIET) (Foundational studies in electronics principles and practical applications).\n- **Dec 2024 - Jan 2025:** Embedded Systems Intern at Siliquan Technologies.\n- **2024-2025:** Earned PCB Design and Python Competency Certifications.";
+      reply = "Key milestones on Bhavya's timeline include:\n- **2023 - Present:** B.Tech, Electronics & Communication Engineering at Andhra Loyola Institute of Engineering and Technology (ALIET).\n- **May - July 2025:** VLSI DFT Intern at BIST Technologies Pvt. Ltd.\n- **May - June 2026:** Embedded Systems Intern at TechLogic IT Solutions Pvt. Ltd.\n- **Certifications:** NPTEL AI & IoT, Infosys Python, APSSDC PCB Design, Reliance Drone Developer.";
     } else if (text.includes('experience') || text.includes('internship') || text.includes('work') || text.includes('job') || text.includes('career')) {
-      reply = "Bhavya has completed two key internships:\n1. **VLSI DFT Intern** at BIST Technologies Pvt. Ltd. (May - July 2025)\n2. **Embedded Systems Intern** at Siliquan Technologies (Dec 2024 - Jan 2025)\n\nFor Placements/Internships, you can contact her directly at **bhavya.mandagiri.ece@gmail.com**.";
+      reply = "Bhavya has completed two key internships:\n1. **VLSI DFT Intern** at BIST Technologies Pvt. Ltd. (May - July 2025)\n2. **Embedded Systems Intern** at TechLogic IT Solutions Pvt. Ltd. (May - June 2026)\n\nFor Placements/Internships, you can contact her directly at **bhavyamandagiri@gmail.com**.";
     } else if (text.includes('gpa') || text.includes('cgpa') || text.includes('grade') || text.includes('academics') || text.includes('marks') || text.includes('college') || text.includes('education') || text.includes('study') || text.includes('degree')) {
-      reply = "Bhavya is currently studying B.Tech ECE at **Andhra Loyola Institute of Engineering and Technology (ALIET)** (JNTUK affiliated) with a cumulative score of **8.06/10.0 CGPA** and zero backlogs (First Class with Distinction).";
+      reply = "Bhavya is currently studying B.Tech ECE at **Andhra Loyola Institute of Engineering and Technology (ALIET)** (JNTUK affiliated) with a cumulative score of **8.0/10.0 CGPA** and zero backlogs.";
     } else if (text.includes('hire') || text.includes('contact') || text.includes('email') || text.includes('linkedin') || text.includes('resume')) {
-      reply = "You can contact Bhavya directly at **bhavya.mandagiri.ece@gmail.com**. Her LinkedIn profile is linkedin.com/in/bhavya-mandagiri-106ba02b5 and GitHub is github.com/bhavyamandagiri.";
+      reply = "You can contact Bhavya directly at **bhavyamandagiri@gmail.com**. Her LinkedIn profile is linkedin.com/in/bhavya-mandagiri-106ba02b5 and GitHub is github.com/bhavyamandagiri.";
     } else if (text.includes('hi') || text.includes('hello') || text.includes('hey')) {
       reply = "Hello there! How can I assist you with evaluating Bhavya's profile today?";
     } else {
@@ -118,16 +118,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     switch(query) {
       case 'skills':
-        reply = "Bhavya's engineering skillset includes:\n- **VLSI Design:** Verilog HDL, Xilinx Vivado, VLSI DFT, LTSpice, SPI/I2C/UART protocols.\n- **Full Stack Development:** JavaScript (ES6+), React.js, Node.js, Express, MongoDB, SQL, HTML5/CSS3.\n- **AI & ML:** Python, TensorFlow, Flask, OpenCV, CNN models, and Data Analysis.\n- **Database & App Dev:** Firebase, Firestore, React Native, Expo.";
+        reply = "Bhavya's engineering skillset includes:\n- **VLSI Design:** Verilog HDL, Xilinx Vivado, VLSI DFT, LTSpice, SPI/I2C/UART protocols.\n- **Full Stack Development:** JavaScript (ES6+), React.js, Node.js, Express, MongoDB, SQL, HTML5/CSS3, Next.js.\n- **AI & ML:** Python, TensorFlow, Flask, OpenCV, CNN models, and Data Analysis.\n- **Database & App Dev:** Firebase, Firestore, React Native, Expo.";
         break;
       case 'projects':
-        reply = "Bhavya's verified projects include:\n- **Green Tech AI Healthcare & Monitoring System** (Python, CNN, OpenCV, Telemetry)\n- **Patient Health Monitoring System** (Arduino, ECG/Temp Sensors, Vital Viz)\n- **Smart Curriculum & Attendance App** (HTML/CSS/JS, SQLite database)";
+        reply = "Bhavya's verified projects include:\n- **Green Tech AI Healthcare & Monitoring System** (Python, CNN, OpenCV, Telemetry)\n- **Smart Curriculum & Attendance App (EduVino)** (Face recognition & analytics)\n- **Patient Health Monitoring System** (Arduino, ECG/Temp telemetry)\n- **Signnovate** (Indian Sign Language SIH 2024 deep learning translator)";
         break;
       case 'contact':
-        reply = "Here are Bhavya's contact details:\n- **Email:** bhavya.mandagiri.ece@gmail.com\n- **LinkedIn:** linkedin.com/in/bhavya-mandagiri-106ba02b5\n- **GitHub:** github.com/bhavyamandagiri\nShe is open to tech internships and placements!";
+        reply = "Here are Bhavya's contact details:\n- **Email:** bhavyamandagiri@gmail.com\n- **LinkedIn:** linkedin.com/in/bhavya-mandagiri-106ba02b5\n- **GitHub:** github.com/bhavyamandagiri\nShe is open to tech internships and placements!";
         break;
       case 'timeline':
-        reply = "Key milestones on Bhavya's timeline include:\n- **2023 - Present:** B.Tech, Electronics & Communication Engineering at Andhra Loyola Institute of Engineering and Technology (ALIET) (Foundational studies in electronics principles and practical applications).\n- **Dec 2024 - Jan 2025:** Embedded Systems Intern at Siliquan Technologies.\n- **2024-2025:** Earned PCB Design and Python Competency Certifications.";
+        reply = "Key milestones on Bhavya's timeline include:\n- **2023 - Present:** B.Tech, Electronics & Communication Engineering at Andhra Loyola Institute of Engineering and Technology (ALIET).\n- **May - July 2025:** VLSI DFT Intern at BIST Technologies Pvt. Ltd.\n- **May - June 2026:** Embedded Systems Intern at TechLogic IT Solutions Pvt. Ltd.\n- **Certifications:** NPTEL AI & IoT, Infosys Python, APSSDC PCB Design, Reliance Drone Developer.";
         break;
       default:
         reply = "How can I help you learn more about Bhavya's academic background?";

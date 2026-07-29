@@ -7,13 +7,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const cgpaGauge = document.getElementById('cgpa-gauge');
   const semesterList = document.getElementById('semester-list');
 
-  // Semester data store (5 semesters completed, matching the user's CGPA record of 8.06)
+  // Semester data store (5 semesters completed, matching the user's CGPA record of 8.00)
   const semesters = [
     { name: 'Semester 1', desc: 'Basics of ECE & Applied Physics', gpa: 7.90 },
-    { name: 'Semester 2', desc: 'Network Analysis & Logic Design', gpa: 8.10 },
+    { name: 'Semester 2', desc: 'Network Analysis & Logic Design', gpa: 8.00 },
     { name: 'Semester 3', desc: 'Electronic Devices & Signals', gpa: 8.00 },
-    { name: 'Semester 4', desc: 'Analog Circuits & EM Waves', gpa: 8.10 },
-    { name: 'Semester 5', desc: 'Microcontrollers & Control Systems', gpa: 8.20 },
+    { name: 'Semester 4', desc: 'Analog Circuits & EM Waves', gpa: 8.00 },
+    { name: 'Semester 5', desc: 'Microcontrollers & Control Systems', gpa: 8.10 },
     { name: 'Semester 6', desc: 'VLSI Design & Digital Signal Processing (Planned)', gpa: 0.00, active: false },
     { name: 'Semester 7', desc: 'AI/ML Applications & IoT (Planned)', gpa: 0.00, active: false },
     { name: 'Semester 8', desc: 'Project Work & Technical Seminars (Planned)', gpa: 0.00, active: false }
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (isNaN(value)) {
       return;
     }
-
+ 
     if (value > 10) {
       value = 10;
       cgpaInput.value = 10;
@@ -113,19 +113,19 @@ document.addEventListener('DOMContentLoaded', () => {
   // Handle blur validation
   cgpaInput.addEventListener('blur', () => {
     if (cgpaInput.value === '') {
-      cgpaInput.value = "8.06";
-      updateGauge(8.06);
+      cgpaInput.value = "8.00";
+      updateGauge(8.00);
       // Reset values
       semesters[0].gpa = 7.90;
-      semesters[1].gpa = 8.10;
+      semesters[1].gpa = 8.00;
       semesters[2].gpa = 8.00;
-      semesters[3].gpa = 8.10;
-      semesters[4].gpa = 8.20;
+      semesters[3].gpa = 8.00;
+      semesters[4].gpa = 8.10;
       renderSemesters();
     }
   });
 
   // Initial Run
   renderSemesters();
-  updateGauge(8.06);
+  updateGauge(8.00);
 });
